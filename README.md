@@ -99,28 +99,39 @@ tela de forma organizada.
 ## Desafio de Desenvolvimento
 
 - [ ] **1. Componente de avaliação do churras**
-        - [ ] **a.** *Criar um componente em LWC que permita o usuário avaliar o churras quando ele for concluído*
-        - [ ] **b.** *O componente deverá ser exibido apenas quando o status estiver "Concluído" na tela do churras*
-        - [ ] **c.** *O componente deve permitir que o usuário coloque a nota e as observações do churras*
-        - [ ] **d.** *Ao fim da avaliação, um registro deverá ser salvo no Salesforce no objeto (Avaliação)*
+
+    - [ ] **a.** *Criar um componente em LWC que permita o usuário avaliar o churras quando ele for concluído*
+
+    - [ ] **b.** *O componente deverá ser exibido apenas quando o status estiver "Concluído" na tela do churras*
+
+    - [ ] **c.** *O componente deve permitir que o usuário coloque a nota e as observações do churras*
+
+    - [ ] **d.** *Ao fim da avaliação, um registro deverá ser salvo no Salesforce no objeto (Avaliação)*
 
 ---
 
 - [ ] **2. Batch de cancelamento de orçamento de churras não realizados**
-        - [ ] **a.** *Um trabalho diário, escrito em Apex (Scheduler/Batch) que cancelará os orçamentos de churras que não aconteceram após a data prevista.*
+
+    - [ ] **a.** *Um trabalho diário, escrito em Apex (Scheduler/Batch) que cancelará os orçamentos de churras que não aconteceram após a data prevista.*
+
 ---
     
 - [ ] **3. Tela de submissão para aprovação do orçamento de churras**
-        - [ ] **a.** *Deve ser desenvolvido um Screen Flow.*
-        - [ ] **b.** *Caso o orçamento de churras tenha ao menos 1 item de serviço, deverá ser submetido à aprovação pelo flow*
-        - [ ] **c.** *Caso o orçamento de churras não tenha nenhum item de serviço, o Status deverá ser atualizado automaticamente para "Agendado"*
+
+    - [ ] **a.** *Deve ser desenvolvido um Screen Flow.*
+
+    - [ ] **b.** *Caso o orçamento de churras tenha ao menos 1 item de serviço, deverá ser submetido à aprovação pelo flow*
+
+    - [ ] **c.** *Caso o orçamento de churras não tenha nenhum item de serviço, o Status deverá ser atualizado automaticamente para "Agendado"*
 
 ---
 
 - [ ] **4. Preenchimento automático do campo Valor no item do churras - Esclarecer sobre esse requisito com o Bruno/Fabrício** 
 
 **Setup para cumprir requisito:**
+
 - [ ]  Criar um Custom Metadata Type chamado “Tabela de preço de serviços”
+
 **Esse objeto terá dois campos:**
 
 - [ ] **1.** **Serviço (Campo picklist que representa o tipo de serviço)*
@@ -129,19 +140,28 @@ tela de forma organizada.
     - **c.** *Garçom*
 
 - [ ] **2** *Valor hora do serviço (Campo moeda que representa o valor hora do tipo de serviço que será prestado).*
+
 *Cadastrar três registros desse objeto:*
     - **Serviço de Churrasqueiro** | **Tipo:** *Churrasqueiro* | **Valor Hora do Serviço**: *20*
     - **Serviço de Limpeza** | **Tipo:** *Limpeza* | **Valor Hora do Serviço**: *30*
     - **Serviço de Garçom** | **Tipo:** *Garçom* | **Valor Hora do Serviço**: *25*
 
 - [ ] **1. Desenvolver um Apex Trigger que preencherá o valor no item do churras quando um for criado e o produto vinculado for do tipo serviço.**
-- [ ] **a. O valor deverá ser preenchido conforme a quantidade, duração em horas do evento multiplicado pelo valor hora do tipo de serviço cadastrado nos metadados acima.** *(Ex.: Se contratado o serviço de 1 churrasqueiro, e o evento durar 5 horas, esse item deverá custar 100 reais.)*
-- [ ] **b. Caso a duração do evento dure em tempo quebrado, a duração para o cálculo deverá ser arredondada para cima.** *(Ex.: Se o início for 12:00 e o fim 13:30, a duração será de 2 horas.)*
+
+    - [ ] **a. O valor deverá ser preenchido conforme a quantidade, duração em horas do evento multiplicado pelo valor hora do tipo de serviço cadastrado nos metadados acima.**
+
+    *(Ex.: Se contratado o serviço de 1 churrasqueiro, e o evento durar 5 horas, esse item deverá custar 100 reais.)*
+
+    - [ ] **b. Caso a duração do evento dure em tempo quebrado, a duração para o cálculo deverá ser arredondada para cima.**
+
+    *(Ex.: Se o início for 12:00 e o fim 13:30, a duração será de 2 horas.)*
 
 ---
 
 - [ ] **5. Validação de itens duplicados no churras**
+
     **a.** *Toda vez que um item de churras for criado, o Apex Trigger deverá verificar se o churras já possui um item com o mesmo produto cadastrado.*
+    
     **b.** *Uma mensagem de erro informando que o produto já existe naquele churras deverá ser exibida.*
 
 ---
@@ -153,8 +173,11 @@ tela de forma organizada.
 ## Usuário de Teste
 
 **1. Sobrenome:** Education
+
 **2. E-mail:** education@everymind.com.br
+
 **3. Username:** [nome]. [sobrenome]@bestminds.com.bm2022-01
+
 **4. Perfil:** Administrador do sistema
 
 
