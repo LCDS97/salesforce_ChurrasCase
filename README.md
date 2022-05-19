@@ -86,13 +86,13 @@ churras.
         *b. Limpeza*
         *c. Garçom*
 
-- [ ] **7.** Os layouts dos registros também serão avaliados, portanto, remova os campos não
+- [ ] **11.** Os layouts dos registros também serão avaliados, portanto, remova os campos não
 utilizados.
 
-- [ ] **8.** Os Lightning Pages também serão avaliados, é importante que distribua os componentes da
+- [ ] **12.** Os Lightning Pages também serão avaliados, é importante que distribua os componentes da
 tela de forma organizada.
 
-- [ ] **9.** Construir relatórios e painéis para análise dos KPI’s (Key Performance Indicator)
+- [ ] **13.** Construir relatórios e painéis para análise dos KPI’s (Key Performance Indicator)
 
 ---
 
@@ -161,7 +161,7 @@ tela de forma organizada.
 - [ ] **5. Validação de itens duplicados no churras**
 
     **a.** *Toda vez que um item de churras for criado, o Apex Trigger deverá verificar se o churras já possui um item com o mesmo produto cadastrado.*
-    
+
     **b.** *Uma mensagem de erro informando que o produto já existe naquele churras deverá ser exibida.*
 
 ---
