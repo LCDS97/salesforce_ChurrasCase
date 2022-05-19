@@ -1,4 +1,7 @@
 # Projeto Best Minds - Case Churras
+
+<img src="./assets/churras-logo.png" />
+
 ---
 ## Objetivo do Desafio
 *Avaliar o desempenho técnico e o conhecimento da plataforma Salesforce.*
@@ -134,12 +137,12 @@ tela de forma organizada.
 
 **Esse objeto terá dois campos:**
 
-- [ ] **1.** **Serviço (Campo picklist que representa o tipo de serviço)*
+- [ ] **1.** *Serviço (Campo picklist que representa o tipo de serviço)*
     - **a.** *Churrasqueiro*
     - **b.** *Limpeza*
     - **c.** *Garçom*
 
-- [ ] **2** *Valor hora do serviço (Campo moeda que representa o valor hora do tipo de serviço que será prestado).*
+- [ ] **2.** *Valor hora do serviço (Campo moeda que representa o valor hora do tipo de serviço que será prestado).*
 
 *Cadastrar três registros desse objeto:*
     - **Serviço de Churrasqueiro** | **Tipo:** *Churrasqueiro* | **Valor Hora do Serviço**: *20*
