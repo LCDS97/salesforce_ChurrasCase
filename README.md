@@ -57,6 +57,13 @@
     - ☑️ **Observações:** Campo área de texto que representa as observações da nota dada
 
 ## ⚠️ Remover todos os campos e deixar somente o que foi pedido ⚠️
+
+    <details><summary>📷 Print do Schema Builder e ligações dos Objetos Criados e Requisitados:</summary>
+
+    ![SchemaBuilder](./assets/ModeloDeDados-SchemaBuilder.png)
+
+    </details>
+
 ---
 
 ## Regras de Negócio
@@ -64,7 +71,7 @@
 - ✅ **1.** Todos os objetos criados deverão ter “Guias” para navegação.
     <details><summary>📷 Print:</summary>
 
-    ![Guias](./assets/RegrasDeNegocio-guias.png)
+    ![RN-Guias](./assets/RegrasDeNegocio-guias.png)
 
     </details>
 
@@ -87,7 +94,7 @@ churras.
 
     <details><summary>📷 Print:</summary>
 
-    ![Guias](./assets/RegrasDeNegocio-status.png)
+    ![RN-Status](./assets/RegrasDeNegocio-status.png)
 
     </details>
 
@@ -107,7 +114,7 @@ churras.
 
     <details><summary>Print:</summary>
 
-    ![Guias](./assets/RegrasDeNegocio-Servicos.png)
+    ![RN-Servicos](./assets/RegrasDeNegocio-Servicos.png)
 
     </details>
 
