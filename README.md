@@ -17,7 +17,7 @@
 
 ## Solução Técnica / Explicações dos campos nos objetos
 
-- [x] 1 - **Contact** <a name="Contact"></a>
+- ✅ 1 - **Contact** <a name="Contact"></a>
     - ☑️ **Name:** Campo padrão do Salesforce
     - ☑️ **CPF:** Campo texto que representa o CPF do Cliente
         - ☑️ Feito uma [regra de validação no Campo para validar o CPF](./adm/CPF__c/validationRule/CPF__c.apex)
@@ -26,40 +26,42 @@
     - ☑️ **Data de Nascimento:** Campo padrão do Salesforce
     - ☑️ **E-mail:** Campo padrão do Salesforce
 
-- [ ] 2 - **Orçamento de churras** <a name="OrcamentoChurras"></a>
-    - [ ] **Name:** Campo de texto padrão do Salesforce que representa o nome do evento de churras
-    - [ ] **Tipo:** Lista de opções que representa o tipo do evento
-    - [ ] **Cliente:** Campo de relacionamento com o *[contato](#Contact)*
-    - [ ] **Status:** Campo de seleção de lista que representa o status do churras
-    - [ ] **Início:** Campo de data hora que representa a data do Orçamento de churras
-    - [ ] **Fim:** Campo de data hora que representa a data do Orçamento de churras
-    - [ ] **Valor Total:** Campo de resumo de totalização dos valores dos itens
+- ✅ 2 - **Orçamento de churras** <a name="OrcamentoChurras"></a>
+    - ☑️ **Name:** Campo de texto padrão do Salesforce que representa o nome do evento de churras
+    - ❌ ~~Tipo: Lista de opções que representa o tipo do evento~~ - **Confirmado com o Bruno - Campo retirado**
+    - ☑️ **Cliente:** Campo de relacionamento com o *[contato](#Contact)*
+    - ☑️ **Status:** Campo de seleção de lista que representa o status do churras - *Deixei somente como leitura* - Opções: **Novo**,**Em Aprovação**, **Agendado**, **Concluído** e **Cancelado**
+    - ☑️ **Início:** Campo de data hora que representa a data do Orçamento de churras
+    - ☑️ **Fim:** Campo de data hora que representa a data do Orçamento de churras
+    - ☑️ **Valor Total:** Campo de resumo de totalização dos valores dos itens
 
-- [ ] 3 - **Item do orçamento de churras**
-    - [ ] **Name:** Numeração automática gerado pelo próprio Salesforce
-    - [ ] **Orçamento de churras:** Campo de relacionamento com o objeto *[Orçamento de churras](#OrcamentoChurras)* 
-    - [ ] **Produto:** Campo de relacionamento com o objeto *[Product2](#Product2)*
-    - [ ] **Quantidade:** Campo numérico que representa a quantidade de itens
-    - [ ] **Valor:** Campo moeda que representa o valor do item
+- ✅ 3 - **Item do orçamento de churras**
+    - ☑️ **Name:** Numeração automática gerado pelo próprio Salesforce
+    - ☑️ **Orçamento de churras:** Campo de relacionamento com o objeto *[Orçamento de churras](#OrcamentoChurras)* - **Mestre-Detalhe**
+    - ☑️ **Produto:** Campo de relacionamento com o objeto *[Product2](#Product2)* - **Lookup**
+    - ☑️ **Quantidade:** Campo numérico que representa a quantidade de itens
+    - ☑️ **Valor:** Campo moeda que representa o valor do item
 
-- [ ] 4 - **Product2**<a name="Product2"></a>
-    - [ ] **Name:** Campo padrão do Salesforce
-    - [ ] **Tipo de registro:** Campo padrão do Salesforce que representa se é um produto ou serviço
-    - [ ] **Serviço:** Campo de lista de opções que representa o tipo do serviço
-    - [ ] **Valor:** Campo moeda que representa o custo do produto
-    - [ ] **Ativo:** Campo padrão do Salesforce
+- ✅ 4 - **Product2**<a name="Product2"></a>
+    - ☑️ **Name:** Campo padrão do Salesforce
+    - ☑️ **Tipo de registro:** Campo padrão do Salesforce que representa se é um produto ou serviço - Dois Tipos de Registros: **Serviço** e **Produto**
+        - [ ] Configurar campos para cada Tipo
+    - ☑️ **Serviço:** Campo de lista de opções que representa o tipo do serviço - Opções: **"Churrasqueiro"**, **"Limpeza"** e **"Garçom"**
+    - ☑️ **Valor:** Campo moeda que representa o custo do produto
+    - ☑️ **Ativo:** Campo padrão do Salesforce
 
-- [ ] 5 - **Avaliação**
-    - [ ] **Name:** Numeração automática gerado pelo próprio Salesforce
-    - [ ] **Orçamento de churras:** Campo de relacionamento com o objeto *[Orçamento de churras](#OrcamentoChurras)*
-    - [ ] **Nota:** Campo numérico que representa a nota de 0 a 10 pela organização do evento
-    - [ ] **Observações:** Campo área de texto que representa as observações da nota dada
+- ✅ 5 - **Avaliação**
+    - ☑️ **Name:** Numeração automática gerado pelo próprio Salesforce
+    - ☑️ **Orçamento de churras:** Campo de relacionamento com o objeto *[Orçamento de churras](#OrcamentoChurras)* - **Mestre-Detalhe**
+    - ☑️ **Nota:** Campo numérico que representa a nota de 0 a 10 pela organização do evento
+    - ☑️ **Observações:** Campo área de texto que representa as observações da nota dada
 
+## Remover todos os campos e deixar somente o que foi pedido
 ---
 
 ## Regras de Negócio
 
-- [ ] **1.** Todos os objetos criados deverão ter “Guias” para navegação.
+- ✅ **1.** Todos os objetos criados deverão ter “Guias” para navegação.
 
 - [ ] **2.** Após os objetos e as guias criadas, um aplicativo com essas guias deverá ser criado.
 
@@ -68,6 +70,7 @@ solicitar um orçamento de um churras
 
 - [ ] **4.** Se um produto/serviço não estiver ativado, ele não poderá ser selecionado como um item do
 churras.
+
 - [ ] **5.** Não é permitido ter o mesmo contato cadastrado duas vezes com o mesmo CPF.
 
 - [ ] **6.** Os valores de status do churras são:
@@ -86,7 +89,7 @@ churras.
         **b.** *Em caso de aprovação, alterar o campo Status para "Agendado" e enviar um e-mail informando a aprovação para o cliente.*
         **c.** *Em caso de reprovação, alterar o campo Status para "Cancelado" e enviar um e-mail informando a reprovação para o cliente.*
 
-- [ ] **10.** Os valores do campo Serviço do produto são:
+- ✅ **10.** Os valores do campo Serviço do produto são:
         *a. Churrasqueiro*
         *b. Limpeza*
         *c. Garçom*
