@@ -58,11 +58,11 @@
 
 ## ⚠️ Remover todos os campos e deixar somente o que foi pedido ⚠️
 
-    <details><summary>📷 Print do Schema Builder e ligações dos Objetos Criados e Requisitados:</summary>
+<details><summary>📷 Print do Schema Builder e ligações dos Objetos Criados e Requisitados:</summary>
 
-    ![SchemaBuilder](./assets/ModeloDeDados-SchemaBuilder.png)
+![SchemaBuilder](./assets/ModeloDeDados-SchemaBuilder.png)
 
-    </details>
+</details>
 
 ---
 
