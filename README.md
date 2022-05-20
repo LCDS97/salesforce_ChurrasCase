@@ -18,11 +18,13 @@
 ## Solução Técnica / Explicações dos campos nos objetos
 
 - [ ] 1 - **Contact** <a name="Contact"></a>
-    - [ ] **Name:** Campo padrão do Salesforce
-    - [ ] **CPF:** Campo texto que representa o CPF do Cliente
-    - [ ] **Telefone:** Campo padrão do Salesforce
-    - [ ] **Data de Nascimento:** Campo padrão do Salesforce
-    - [ ] **E-mail:** Campo padrão do Salesforce
+    - ☑️ **Name:** Campo padrão do Salesforce
+    - ☑️ **CPF:** Campo texto que representa o CPF do Cliente
+        - ☑️ Feito uma [regra de validação no Campo para validar o CPF](./scripts/formulas/CPF__c.apex)
+       - ☑️ Feito um [Flow para verifcação da mascára e formatação do CPF](./scripts/formulas/assets/flow.CPF)<details><summary>Expandir detalhes do Flow</summary><img src="./assets/flowCPF.png"></details> 
+    - ☑️ **Telefone:** Campo padrão do Salesforce
+    - ☑️ **Data de Nascimento:** Campo padrão do Salesforce
+    - ☑️ **E-mail:** Campo padrão do Salesforce
 
 - [ ] 2 - **Orçamento de churras** <a name="OrcamentoChurras"></a>
     - [ ] **Name:** Campo de texto padrão do Salesforce que representa o nome do evento de churras
