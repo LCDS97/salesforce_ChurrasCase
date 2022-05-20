@@ -21,7 +21,7 @@
     - ☑️ **Name:** Campo padrão do Salesforce
     - ☑️ **CPF:** Campo texto que representa o CPF do Cliente
         - ☑️ Feito uma [regra de validação no Campo para validar o CPF](./adm/CPF__c/validationRule/CPF__c.apex)
-       - ☑️ Feito um [Flow para verifcação da mascára e formatação do CPF](./adm/CPF__c/flow/CPF__c.apex)<details><summary>Expandir detalhes do Flow</summary><img src="./assets/flowCPF.png"></details> 
+       - ☑️ Feito um [Flow para verifcação da mascára e formatação do CPF](./adm/CPF__c/flow/CPF__c.apex)<details><summary> 📷 Print do Flow</summary><img src="./assets/flowCPF.png"></details> 
     - ☑️ **Telefone:** Campo padrão do Salesforce
     - ☑️ **Data de Nascimento:** Campo padrão do Salesforce
     - ☑️ **E-mail:** Campo padrão do Salesforce
@@ -56,19 +56,17 @@
     - ☑️ **Nota:** Campo numérico que representa a nota de 0 a 10 pela organização do evento
     - ☑️ **Observações:** Campo área de texto que representa as observações da nota dada
 
-## Remover todos os campos e deixar somente o que foi pedido
+## ⚠️ Remover todos os campos e deixar somente o que foi pedido ⚠️
 ---
 
 ## Regras de Negócio
 
 - ✅ **1.** Todos os objetos criados deverão ter “Guias” para navegação.
-    <details><summary>Print:</summary>
+    <details><summary>📷 Print:</summary>
 
     ![Guias](./assets/RegrasDeNegocio-guias.png)
 
     </details>
-
-    
 
 - 🔲 **2.** Após os objetos e as guias criadas, um aplicativo com essas guias deverá ser criado.
 
@@ -87,14 +85,11 @@ churras.
     - **d.** *Concluído*
     - **e.** *Cancelado*
 
-<details><summary>Print:</summary>
+    <details><summary>📷 Print:</summary>
 
-![Guias](./assets/RegrasDeNegocio-status.png)
+    ![Guias](./assets/RegrasDeNegocio-status.png)
 
-</details>
-
-<br>
-
+    </details>
 
 - 🔲 **7.** Um churras só poderá receber novos itens enquanto ele estiver como "Novo".
 
@@ -110,13 +105,11 @@ churras.
     - *b. Limpeza*
     - *c. Garçom*
 
-<details><summary>Print:</summary>
+    <details><summary>Print:</summary>
 
-![Guias](./assets/RegrasDeNegocio-Servicos.png)
+    ![Guias](./assets/RegrasDeNegocio-Servicos.png)
 
-</details>
-
-<br>
+    </details>
 
 - 🔲 **11.** Os layouts dos registros também serão avaliados, portanto, remova os campos não
 utilizados.
