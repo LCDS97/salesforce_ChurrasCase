@@ -88,7 +88,20 @@
 
 - 🔲 **4.** Se um produto/serviço não estiver ativado, ele não poderá ser selecionado como um item do churras.
 
-- 🔲 **5.** Não é permitido ter o mesmo contato cadastrado duas vezes com o mesmo CPF.
+- ✅ **5.** Não é permitido ter o mesmo contato cadastrado duas vezes com o mesmo CPF. - **Regra de Duplicidade**
+    <details><summary>📷 Print da regra:</summary>
+
+    ![RN-ItemDuplicado](./assets/RegrasDeNegocio-DuplicataCPF.png)
+    ![RN-ItemDuplicado](./assets/RegrasDeNegocio-DuplicataCPF2.png)
+
+    </details>
+    <details><summary>📷 Print no Registro Criando e Editando:</summary>
+
+    ![RN-ItemDuplicado](./assets/RegrasDeNegocio-DuplicataCPF3.png)
+    ![RN-ItemDuplicado](./assets/RegrasDeNegocio-DuplicataCPF4.png)
+    ![RN-ItemDuplicado](./assets/RegrasDeNegocio-DuplicataCPF5.png)
+
+    </details>
 
 - ✅ **6.** Os valores de status do churras são:
     - **a.** *Novo (Valor padrão)*
