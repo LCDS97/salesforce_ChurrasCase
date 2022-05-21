@@ -75,13 +75,18 @@
 
     </details>
 
-- 🔲 **2.** Após os objetos e as guias criadas, um aplicativo com essas guias deverá ser criado.
+- ✅ **2.** Após os objetos e as guias criadas, um aplicativo com essas guias deverá ser criado.
+    <details><summary>📷 Print:</summary>
 
-- 🔲 **3.** Um cliente pode ser criado sem um CPF, mas sem esse campo preenchido, ele não pode
-solicitar um orçamento de um churras
+    ![RN-App](./assets/RegrasDeNegocio-App.png)
+    ![RN-App](./assets/RegrasDeNegocio-App2.png)
 
-- 🔲 **4.** Se um produto/serviço não estiver ativado, ele não poderá ser selecionado como um item do
-churras.
+    </details>
+
+- 🔲 **3.** Um cliente pode ser criado sem um CPF, mas sem esse campo preenchido, ele não pode solicitar um orçamento de um churras
+    - [ ] **a.** *Ideia minha adicional, criar tarefa para o usuário para lembrar de por o CPF para solicitar o orçamento*
+
+- 🔲 **4.** Se um produto/serviço não estiver ativado, ele não poderá ser selecionado como um item do churras.
 
 - 🔲 **5.** Não é permitido ter o mesmo contato cadastrado duas vezes com o mesmo CPF.
 
@@ -180,11 +185,13 @@ tela de forma organizada.
 
 - 🔲 **1. Desenvolver um Apex Trigger que preencherá o valor no item do churras quando um for criado e o produto vinculado for do tipo serviço.**
 
-    - 🔲 **a. O valor deverá ser preenchido conforme a quantidade, duração em horas do evento multiplicado pelo valor hora do tipo de serviço cadastrado nos metadados acima.**
+    - 🔲 **a.** *Quando o produto vinculado for do tipo **PRODUTO**, o valor deverá ser preenchido com a multiplicação da quantidade x custo do produto*
+
+    - 🔲 **b.** *Quando o produto for do tipo **SERVIÇO**, o valor deverá ser preenchido conforme a quantidade, duração em horas do evento multiplicado pelo valor hora do tipo de serviço cadastrado nos metadados acima.*
 
     *(Ex.: Se contratado o serviço de 1 churrasqueiro, e o evento durar 5 horas, esse item deverá custar 100 reais.)*
 
-    - 🔲 **b. Caso a duração do evento dure em tempo quebrado, a duração para o cálculo deverá ser arredondada para cima.**
+    - 🔲 **c.** *Caso a duração do evento dure em tempo quebrado, a duração para o cálculo deverá ser arredondada para cima.*
 
     *(Ex.: Se o início for 12:00 e o fim 13:30, a duração será de 2 horas.)*
 
