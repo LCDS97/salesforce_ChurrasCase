@@ -83,7 +83,22 @@
 
     </details>
 
-- 🔲 **3.** Um cliente pode ser criado sem um CPF, mas sem esse campo preenchido, ele não pode solicitar um orçamento de um churras
+- ✅ **3.** Um cliente pode ser criado sem um CPF, mas sem esse campo preenchido, ele não pode solicitar um orçamento de um churras
+    
+    <details><summary>📷 Print da regra:</summary>
+
+    ![RN-CPFObrigatorio](./assets/RegrasDeNegocio-CriarOrcamento.png)
+
+    </details>
+
+    <details><summary>📷 Print no Registro Sem e Com CPF:</summary>
+
+    ![RN-ItemDuplicado](./assets/RegrasDeNegocio-CriarOrcamento2.png)
+    ![RN-ItemDuplicado](./assets/RegrasDeNegocio-CriarOrcamento3.png)
+    ![RN-ItemDuplicado](./assets/RegrasDeNegocio-CriarOrcamento4.png)
+
+    </details>
+    
     - [ ] **a.** *Ideia minha adicional, criar tarefa para o usuário para lembrar de por o CPF para solicitar o orçamento*
 
 - 🔲 **4.** Se um produto/serviço não estiver ativado, ele não poderá ser selecionado como um item do churras.
