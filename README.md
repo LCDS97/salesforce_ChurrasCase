@@ -56,7 +56,6 @@
     - ☑️ **Nota:** Campo numérico que representa a nota de 0 a 10 pela organização do evento
     - ☑️ **Observações:** Campo área de texto que representa as observações da nota dada
 
-## ⚠️ Remover todos os campos e deixar somente o que foi pedido ⚠️
 
 <details><summary>📷 Print do Schema Builder e ligações dos Objetos Criados e Requisitados:</summary>
 
@@ -135,10 +134,12 @@
 
 - 🔲 **8.** Quando um churras for "Agendado", uma notificação deverá ser feita ao cliente.
 
-- 🔲 **9.** Criar um processo de aprovação simples para aprovação de um novo churras:
+- ✅ **9.** Criar um processo de aprovação simples para aprovação de um novo churras:
     - **a.** *Quando submetido, o campo Status deve ser alterado automaticamente para "Em aprovação"*
     - **b.** *Em caso de aprovação, alterar o campo Status para "Agendado" e enviar um e-mail informando a aprovação para o cliente.*
     - **c.** *Em caso de reprovação, alterar o campo Status para "Cancelado" e enviar um e-mail informando a reprovação para o cliente.*
+⚠️ *Falta tirar prints do processo de Aprovação e fases nos registros* ⚠️
+
 
 - ✅ **10.** Os valores do campo Serviço do produto são:
     - *a. Churrasqueiro*
