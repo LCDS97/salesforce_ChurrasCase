@@ -21,7 +21,7 @@
     - ☑️ **Name:** Campo padrão do Salesforce
     - ☑️ **CPF:** Campo texto que representa o CPF do Cliente
         - ☑️ Feito uma [regra de validação no Campo para validar o CPF](./adm/CPF__c/validationRule/CPF__c.apex)
-       - ☑️ Feito um [Flow para verifcação da mascára e formatação do CPF](./adm/CPF__c/flow/CPF__c.apex)<details><summary> 📷 Print do Flow</summary><img src="./assets/flowCPF.png"></details> 
+       - ☑️ Feito um [Flow para verifcação da mascára e formatação do CPF](./adm/CPF__c/flow/CPF__c.apex)<details><summary> 📷 Print do Flow</summary><img src="./assets/flowCPF.png"></details><details><summary> 📷 Evidência testando com número inválido, faltante e pontuação errada: </summary><img src="./assets/flowCPF.gif"></details> 
     - ☑️ **Telefone:** Campo padrão do Salesforce
     - ☑️ **Data de Nascimento:** Campo padrão do Salesforce
     - ☑️ **E-mail:** Campo padrão do Salesforce
@@ -92,13 +92,26 @@
 
     <details><summary>📷 Evidência - Testando a regra:</summary>
 
-    ![RN-ItemDuplicado](./assets/RegrasDeNegocio-CriarOrcamento.gif)
+    ![RN-CPFObrigatorioGif](./assets/RegrasDeNegocio-CriarOrcamento.gif)
 
     </details>
     
     - [ ] **a.** *Ideia minha adicional, criar tarefa para o usuário para lembrar de por o CPF para solicitar o orçamento*
 
-- 🔲 **4.** Se um produto/serviço não estiver ativado, ele não poderá ser selecionado como um item do churras.
+- ✅ **4.** Se um produto/serviço não estiver ativado, ele não poderá ser selecionado como um item do churras.
+    <details><summary>📷 Print das regras:</summary>
+
+    ![RN-Product2Ativo](./assets/RegrasDeNegocio-Product2Ativo.png)
+    ![RN-Product2Ativo](./assets/RegrasDeNegocio-Product2Ativo2.png)
+
+    </details>
+
+    <details><summary>📷 Evidência - Testando a regra:</summary>
+
+    ![RN-Product2Ativo](./assets/RegrasDeNegocio-Product2Ativo.gif)
+    ![RN-Product2Ativo](./assets/RegrasDeNegocio-Product2Ativo2.gif)
+
+    </details>
 
 - ✅ **5.** Não é permitido ter o mesmo contato cadastrado duas vezes com o mesmo CPF. - **Regra de Duplicidade**
     <details><summary>📷 Print da regra:</summary>
