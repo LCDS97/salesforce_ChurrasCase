@@ -107,11 +107,14 @@
     ![RN-ItemDuplicado](./assets/RegrasDeNegocio-DuplicataCPF2.png)
 
     </details>
-    <details><summary>📷 Print no Registro Criando e Editando:</summary>
+    <details><summary>📷 Testando regra Criando:</summary>
 
-    ![RN-ItemDuplicado](./assets/RegrasDeNegocio-DuplicataCPF3.png)
-    ![RN-ItemDuplicado](./assets/RegrasDeNegocio-DuplicataCPF4.png)
-    ![RN-ItemDuplicado](./assets/RegrasDeNegocio-DuplicataCPF5.png)
+    ![RN-ItemDuplicado](./assets/RegrasDeNegocio-DuplicataCPF3.gif)
+
+    </details>
+    <details><summary>📷 Testando regra Editando:</summary>
+
+    ![RN-ItemDuplicado](./assets/RegrasDeNegocio-DuplicataCPF4.gif)
 
     </details>
 
