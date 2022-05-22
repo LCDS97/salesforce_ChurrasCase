@@ -78,7 +78,7 @@
     <details><summary>📷 Print:</summary>
 
     ![RN-App](./assets/RegrasDeNegocio-App.png)
-    ![RN-App](./assets/RegrasDeNegocio-App2.png)
+    ![RN-App2](./assets/RegrasDeNegocio-App2.png)
 
     </details>
 
@@ -102,14 +102,14 @@
     <details><summary>📷 Print das regras:</summary>
 
     ![RN-Product2Ativo](./assets/RegrasDeNegocio-Product2Ativo.png)
-    ![RN-Product2Ativo](./assets/RegrasDeNegocio-Product2Ativo2.png)
+    ![RN-Product2Ativo2](./assets/RegrasDeNegocio-Product2Ativo2.png)
 
     </details>
 
     <details><summary>📷 Evidência - Testando a regra:</summary>
 
-    ![RN-Product2Ativo](./assets/RegrasDeNegocio-Product2Ativo.gif)
-    ![RN-Product2Ativo](./assets/RegrasDeNegocio-Product2Ativo2.gif)
+    ![RN-Product2AtivoGif](./assets/RegrasDeNegocio-Product2Ativo.gif)
+    ![RN-Product2AtivoGif2](./assets/RegrasDeNegocio-Product2Ativo2.gif)
 
     </details>
 
@@ -117,17 +117,17 @@
     <details><summary>📷 Print da regra:</summary>
 
     ![RN-ItemDuplicado](./assets/RegrasDeNegocio-DuplicataCPF.png)
-    ![RN-ItemDuplicado](./assets/RegrasDeNegocio-DuplicataCPF2.png)
+    ![RN-ItemDuplicado2](./assets/RegrasDeNegocio-DuplicataCPF2.png)
 
     </details>
     <details><summary>📷 Testando regra Criando:</summary>
 
-    ![RN-ItemDuplicado](./assets/RegrasDeNegocio-DuplicataCPF3.gif)
+    ![RN-ItemDuplicadoGif](./assets/RegrasDeNegocio-DuplicataCPF3.gif)
 
     </details>
     <details><summary>📷 Testando regra Editando:</summary>
 
-    ![RN-ItemDuplicado](./assets/RegrasDeNegocio-DuplicataCPF4.gif)
+    ![RN-ItemDuplicadoGif2](./assets/RegrasDeNegocio-DuplicataCPF4.gif)
 
     </details>
 
@@ -147,16 +147,17 @@
 - ✅ **7.** Um churras só poderá receber novos itens enquanto ele estiver como "Novo".
     <details><summary>📷 Print da regra:</summary>
 
-    ![RN-Status](./assets/RegrasDeNegocio-AdicionarItemSomenteNovo.png)
+    ![RN-ItemSomenteNovo](./assets/RegrasDeNegocio-AdicionarItemSomenteNovo.png)
 
 
     </details>
     ⚠️ Fazer evidência depois ⚠️
 
 
-- 🔲 **8.** Quando um churras for "Agendado", uma notificação deverá ser feita ao cliente.
+- ✅ **8.** Quando um churras for "Agendado", uma notificação deverá ser feita ao cliente.
 
->    Achei bug que quando o campo é atualizado pelo Approval Process, o Bell Notification não funciona, workaround seria criar um campo customizavel e assinar notifação pelo campo - [Developer Salesforce](https://developer.salesforce.com/forums/?id=9062I000000DOQMQA4)
+>    Achei bug que quando o campo é atualizado pelo Approval Process, o Bell Notification não funciona, workaround seria criar um campo checkbox ( Foi Aprovado__c ) e acionar pelo campo junto com o valor do Status Agendado - [Developer Salesforce](https://developer.salesforce.com/forums/?id=9062I000000DOQMQA4), para conseguir resolver esse problema, utilizei o flow e consultei esse vídeo [Youtube](https://www.youtube.com/watch?v=zful5lBobOk)
+    ⚠️ Fazer evidência depois ⚠️
 
 - ✅ **9.** Criar um processo de aprovação simples para aprovação de um novo churras:
     <details><summary>📷 Prints do Processo de Aprovação e Template de E-mail:</summary>
@@ -202,18 +203,26 @@
 
     </details>
 
-- 🔲 **11.** Os layouts dos registros também serão avaliados, portanto, remova os campos não
+- ✅ **11.** Os layouts dos registros também serão avaliados, portanto, remova os campos não
 utilizados.
 
 ⚠️ *Falta tirar prints dos layouts de registros* ⚠️
 
 
-- 🔲 **12.** Os Lightning Pages também serão avaliados, é importante que distribua os componentes da
+- ✅ **12.** Os Lightning Pages também serão avaliados, é importante que distribua os componentes da
 tela de forma organizada.
 
 ⚠️ *Falta tirar prints dos layouts de registros* ⚠️
 
 - 🔲 **13.** Construir relatórios e painéis para análise dos KPI’s (Key Performance Indicator)
+    - Maiores Orçamentos
+    - Itens por Orçamento
+    - Clientes novos por Mês
+    - Clientes com possiblidade de fazer um orçamento
+    - Orçamentos Agendados x Orçamentos Cancelados
+    - Orçamentos Concluídos
+    - Avaliações por Orçamento
+
 
 ---
 
@@ -304,5 +313,16 @@ tela de forma organizada.
 **4. Perfil:** Administrador do sistema
 
 
+---
+
+## Incrementos e ideias adicionais
+
+- ✅ Formatação de CPF
+- ✅ Vericar se CPF é valído
+- ✅ Usuário não consegue mudar o Status sem passar pelo processo de aprovação
+    > Filtragem do botão pelo Lightning Page e remoção do Status Concluído
+
+- 🔲 Formatação de telefone
+- 🔲 Atribuir botão de Concluído por LWC? ou Verificar através da Data Fim para Alterar para Concluído automaticamente
 
 
