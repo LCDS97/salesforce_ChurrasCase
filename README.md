@@ -20,8 +20,6 @@
 - ✅ 1 - **Contact** <a name="Contact"></a>
     - ☑️ **Name:** Campo padrão do Salesforce
     - ☑️ **CPF:** Campo texto que representa o CPF do Cliente
-        - ☑️ Feito uma [regra de validação no Campo para validar o CPF](./adm/CPF__c/validationRule/CPF__c.apex)
-       - ☑️ Feito um [Flow para verifcação da mascára e formatação do CPF](./adm/CPF__c/flow/CPF__c.apex)<details><summary> 📷 Print do Flow</summary><img src="./assets/flowCPF.png"></details><details><summary> 📷 Evidência testando com número inválido, faltante e pontuação errada: </summary><img src="./assets/flowCPF.gif"></details> 
     - ☑️ **Telefone:** Campo padrão do Salesforce
     - ☑️ **Data de Nascimento:** Campo padrão do Salesforce
     - ☑️ **E-mail:** Campo padrão do Salesforce
@@ -45,7 +43,7 @@
 - ✅ 4 - **Product2**<a name="Product2"></a>
     - ☑️ **Name:** Campo padrão do Salesforce
     - ☑️ **Tipo de registro:** Campo padrão do Salesforce que representa se é um produto ou serviço - Dois Tipos de Registros: **Serviço** e **Produto**
-        - 🔲 Configurar campos para cada Tipo
+        - ✅ Configurar campos para cada Tipo
     - ☑️ **Serviço:** Campo de lista de opções que representa o tipo do serviço - Opções: **"Churrasqueiro"**, **"Limpeza"** e **"Garçom"**
     - ☑️ **Valor:** Campo moeda que representa o custo do produto
     - ☑️ **Ativo:** Campo padrão do Salesforce
@@ -96,7 +94,6 @@
 
     </details>
     
-    - [ ] **a.** *Ideia minha adicional, criar tarefa para o usuário para lembrar de por o CPF para solicitar o orçamento*
 
 - ✅ **4.** Se um produto/serviço não estiver ativado, ele não poderá ser selecionado como um item do churras.
     <details><summary>📷 Print das regras:</summary>
@@ -317,12 +314,15 @@ tela de forma organizada.
 
 ## Incrementos e ideias adicionais
 
-- ✅ Formatação de CPF
-- ✅ Vericar se CPF é valído
+- ✅ Feito uma [regra de validação no Campo para validar o CPF](./adm/CPF__c/validationRule/CPF__c.apex)
+- ✅ Feito um [Flow para verifcação da mascára e formatação do CPF](./adm/CPF__c/flow/CPF__c.apex)<details><summary> 📷 Print do Flow</summary><img src="./assets/flowCPF.png"></details><details><summary> 📷 Evidência testando com número inválido, faltante e pontuação errada: </summary><img src="./assets/flowCPF.gif"></details> 
+
 - ✅ Usuário não consegue mudar o Status sem passar pelo processo de aprovação
     > Filtragem do botão pelo Lightning Page e remoção do Status Concluído
 
 - 🔲 Formatação de telefone
 - 🔲 Atribuir botão de Concluído por LWC? ou Verificar através da Data Fim para Alterar para Concluído automaticamente
+- 🔲 Fazer desconto de 5% ou 10% se for mês de aniversârio do contato atrelado ao Orçamento
+- 🔲 Criar tarefa para o usuário para lembrar de por o CPF para solicitar o orçamento*
 
 
