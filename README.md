@@ -90,11 +90,9 @@
 
     </details>
 
-    <details><summary>📷 Print no Registro Sem e Com CPF:</summary>
+    <details><summary>📷 Evidência - Testando a regra:</summary>
 
-    ![RN-ItemDuplicado](./assets/RegrasDeNegocio-CriarOrcamento2.png)
-    ![RN-ItemDuplicado](./assets/RegrasDeNegocio-CriarOrcamento3.png)
-    ![RN-ItemDuplicado](./assets/RegrasDeNegocio-CriarOrcamento4.png)
+    ![RN-ItemDuplicado](./assets/RegrasDeNegocio-CriarOrcamento.gif)
 
     </details>
     
@@ -135,10 +133,36 @@
 - 🔲 **8.** Quando um churras for "Agendado", uma notificação deverá ser feita ao cliente.
 
 - ✅ **9.** Criar um processo de aprovação simples para aprovação de um novo churras:
+    <details><summary>📷 Prints do Processo de Aprovação e Template de E-mail:</summary>
+
+    ![RN-Status](./assets/RegrasDeNegocio-ProcessoAprovacao.png)
+    ![RN-Status](./assets/RegrasDeNegocio-ProcessoAprovacao2.png)
+    ![RN-Status](./assets/RegrasDeNegocio-ProcessoAprovacao3.png)
+    ![RN-Status](./assets/RegrasDeNegocio-ProcessoAprovacao4.png)
+    ![RN-Status](./assets/RegrasDeNegocio-ProcessoAprovacao5.png)
+    ![RN-Status](./assets/RegrasDeNegocio-ProcessoAprovacao6.png)
+
+    </details>
+
     - **a.** *Quando submetido, o campo Status deve ser alterado automaticamente para "Em aprovação"*
+        <details><summary>📷 Evidência:</summary>
+
+        ![RN-Status](./assets/RegrasDeNegocio-ProcessoAprovacaoEnviando.gif)
+
+        </details>
     - **b.** *Em caso de aprovação, alterar o campo Status para "Agendado" e enviar um e-mail informando a aprovação para o cliente.*
+        <details><summary>📷 Evidência:</summary>
+
+        ![RN-Status](./assets/RegrasDeNegocio-ProcessoDeAprovacaoAgendado.gif)
+
+        </details>
     - **c.** *Em caso de reprovação, alterar o campo Status para "Cancelado" e enviar um e-mail informando a reprovação para o cliente.*
-⚠️ *Falta tirar prints do processo de Aprovação e fases nos registros* ⚠️
+        <details><summary>📷 Evidência:</summary>
+
+        ![RN-Status](./assets/RegrasDeNegocio-ProcessoDeAprovacaoRejeitar.gif)
+
+        </details>
+
 
 
 - ✅ **10.** Os valores do campo Serviço do produto são:
@@ -155,8 +179,13 @@
 - 🔲 **11.** Os layouts dos registros também serão avaliados, portanto, remova os campos não
 utilizados.
 
+⚠️ *Falta tirar prints dos layouts de registros* ⚠️
+
+
 - 🔲 **12.** Os Lightning Pages também serão avaliados, é importante que distribua os componentes da
 tela de forma organizada.
+
+⚠️ *Falta tirar prints dos layouts de registros* ⚠️
 
 - 🔲 **13.** Construir relatórios e painéis para análise dos KPI’s (Key Performance Indicator)
 
