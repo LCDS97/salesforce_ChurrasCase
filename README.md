@@ -144,9 +144,19 @@
 
     </details>
 
-- 🔲 **7.** Um churras só poderá receber novos itens enquanto ele estiver como "Novo".
+- ✅ **7.** Um churras só poderá receber novos itens enquanto ele estiver como "Novo".
+    <details><summary>📷 Print da regra:</summary>
+
+    ![RN-Status](./assets/RegrasDeNegocio-AdicionarItemSomenteNovo.png)
+
+
+    </details>
+    ⚠️ Fazer evidência depois ⚠️
+
 
 - 🔲 **8.** Quando um churras for "Agendado", uma notificação deverá ser feita ao cliente.
+
+>    Achei bug que quando o campo é atualizado pelo Approval Process, o Bell Notification não funciona, workaround seria criar um campo customizavel e assinar notifação pelo campo - [Developer Salesforce](https://developer.salesforce.com/forums/?id=9062I000000DOQMQA4)
 
 - ✅ **9.** Criar um processo de aprovação simples para aprovação de um novo churras:
     <details><summary>📷 Prints do Processo de Aprovação e Template de E-mail:</summary>
