@@ -168,6 +168,8 @@
 
     </details>
 
+    ### ⚠️Atualizar print pelo Campo aprovade para False agora ⚠️
+
     - **a.** *Quando submetido, o campo Status deve ser alterado automaticamente para "Em aprovação"*
         <details><summary>📷 Evidência:</summary>
 
@@ -243,13 +245,17 @@ tela de forma organizada.
 
 ---
     
-- 🔲 **3. Tela de submissão para aprovação do orçamento de churras**
+- ✅ **3. Tela de submissão para aprovação do orçamento de churras**
 
-    - 🔲 **a.** *Deve ser desenvolvido um Screen Flow.*
+    - ✅ **a.** *Deve ser desenvolvido um Screen Flow.*
 
-    - 🔲 **b.** *Caso o orçamento de churras tenha ao menos 1 item de serviço, deverá ser submetido à aprovação pelo flow*
+    - ✅ **b.** *Caso o orçamento de churras tenha ao menos 1 item de serviço, deverá ser submetido à aprovação pelo flow*
 
-    - 🔲 **c.** *Caso o orçamento de churras não tenha nenhum item de serviço, o Status deverá ser atualizado automaticamente para "Agendado"*
+    - ✅ **c.** *Caso o orçamento de churras não tenha nenhum item de serviço, o Status deverá ser atualizado automaticamente para "Agendado"*
+
+    ### Tirar Evidência depois ###
+
+### Verificar como vou fazer no Flow para identificar 1 item de serviço ( Utlizar product ou item de orçamento)    
 
 ---
 
@@ -324,5 +330,6 @@ tela de forma organizada.
 - 🔲 Atribuir botão de Concluído por LWC? ou Verificar através da Data Fim para Alterar para Concluído automaticamente
 - 🔲 Fazer desconto de 5% ou 10% se for mês de aniversârio do contato atrelado ao Orçamento
 - 🔲 Criar tarefa para o usuário para lembrar de por o CPF para solicitar o orçamento*
+- 🔲 Fazer botão concluído após Data do FIM ou botão para usuário fazer essa ação ( Quick Action ), Vou deixar um campo de observações caso ele necessite reagendar outro agendamento, ou reativar o processo para aprovação novamente
 
 
