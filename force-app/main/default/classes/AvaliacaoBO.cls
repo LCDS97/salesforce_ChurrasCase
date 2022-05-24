@@ -8,12 +8,12 @@ public with sharing class AvaliacaoBO {
         try {
             response.mensagem = 'Dados carregados com sucesso!';
             response.sucesso = true;
-            response.listObject = lstAvaliacoesTO;
+            response.lstObject = lstAvaliacoesTO;
             
         } catch (Exception e) {
             response.mensagem = e.getMessage();
             response.sucesso = false;
-            response.listObject = null;
+            response.lstObject = null;
 
         }
 

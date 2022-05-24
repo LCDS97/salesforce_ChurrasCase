@@ -9,9 +9,9 @@ public with sharing class ResponseTO {
     public String jsonRetorno {get;set;}
 
     @AuraEnabled
-    public List<Object> listObject {get;set;}
+    public List<Object> lstObject {get;set;}
 
     @AuraEnabled
-    public List<SObject> listSObject {get;set;}
+    public List<SObject> lstSObject {get;set;}
 
 }
