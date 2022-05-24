@@ -237,11 +237,16 @@ tela de forma organizada.
 
     - 🔲 **d.** *Ao fim da avaliação, um registro deverá ser salvo no Salesforce no objeto (Avaliação)*
 
+    - 🔲 **CSS: Editar os botões com classe de CSS e aplicar tanto fora quanto dentro de um form**
+
 ---
 
 - 🔲 **2. Batch de cancelamento de orçamento de churras não realizados**
 
     - 🔲 **a.** *Um trabalho diário, escrito em Apex (Scheduler/Batch) que cancelará os orçamentos de churras que não aconteceram após a data prevista.*
+        - Se for para Novo cancelar no dia seguinte.
+        - Se for para Agendado cancelar dois dias depois.
+            Porque? No meu caso o cliente vai ter um botão para concluir o evento após o agendado for no dia do Fim e para cancelar também
 
 ---
     
@@ -254,8 +259,6 @@ tela de forma organizada.
     - ✅ **c.** *Caso o orçamento de churras não tenha nenhum item de serviço, o Status deverá ser atualizado automaticamente para "Agendado"*
 
     ### Tirar Evidência depois ###
-
-### Verificar como vou fazer no Flow para identificar 1 item de serviço ( Utlizar product ou item de orçamento)    
 
 ---
 

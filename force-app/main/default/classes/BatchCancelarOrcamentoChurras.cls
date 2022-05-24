@@ -5,27 +5,27 @@ public class BatchCancelarOrcamentoChurras  implements Database.Batchable<SObjec
         public Database.QueryLocator start(Database.BatchableContext bc){
             return Database.getQueryLocator([SELECT
                                                 Id,
-                                                ContactId
-                                            FROM
-                                                Case
+                                                Fim__c,
+                                                Status__c 
+                                            FROM 
+                                                OrcamentoChurras__c
                                             WHERE
-                                                ContactId = null
-                                            AND
-                                                CreatedDate = LAST_N_DAYS:5]);
+                                                Fim__c < LAST_N_DAYS:1 
+                                            AND 
+                                                (   Status__c = 'Agendado'
+                                                OR
+                                                    Status__c = 'Novo'
+                                                )
+                                            ]);
         }
     
-        public void execute(Database.BatchableContext bc, List<Case> lstCases){
-            Contact contatoMeu = new Contact();
-            contatoMeu.LastName = 'Santos';
-            contatoMeu.FirstName = 'Lucas';
-    
-            insert contatoMeu;
-    
-            for(Case caso : lstCases){
-                caso.ContactId = contatoMeu.Id;
+        public void execute(Database.BatchableContext bc, List<OrcamentoChurras__c> lstOrcamentos){
+
+            for(OrcamentoChurras__c orcamento : lstOrcamentos){
+                orcamento.Status__c = 'Cancelado';
             }
     
-            update lstCases;
+            update lstOrcamentos;
             
         }
     
