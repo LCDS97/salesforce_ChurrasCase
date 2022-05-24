@@ -237,11 +237,11 @@ tela de forma organizada.
 
     - 🔲 **d.** *Ao fim da avaliação, um registro deverá ser salvo no Salesforce no objeto (Avaliação)*
 
-    - 🔲 **CSS: Editar os botões com classe de CSS e aplicar tanto fora quanto dentro de um form**
+    - 🔲 **CSS: Editar os    botões com classe de CSS e aplicar tanto fora quanto dentro de um form**
 
 ---
 
-- 🔲 **2. Batch de cancelamento de orçamento de churras não realizados**
+- ✅ **2. Batch de cancelamento de orçamento de churras não realizados**
 
     - ✅ **a.** *Um trabalho diário, escrito em Apex (Scheduler/Batch) que cancelará os orçamentos de churras que não aconteceram após a data prevista.*
 
@@ -311,7 +311,7 @@ tela de forma organizada.
 
 
 
-## Usuário de Teste
+## ✅ Usuário de Teste
 
 **1. Sobrenome:** Education
 
@@ -320,6 +320,8 @@ tela de forma organizada.
 **3. Username:** [nome]. [sobrenome]@bestminds.com.bm2022-01
 
 **4. Perfil:** Administrador do sistema
+
+**Somente resetar a senha e tirar evidência**
 
 
 ---
@@ -331,11 +333,13 @@ tela de forma organizada.
 
 - ✅ Usuário não consegue mudar o Status sem passar pelo processo de aprovação
     > Filtragem do botão pelo Lightning Page e remoção do Status Concluído
+- ✅ Criei Flow para permitir depois de Agendado se quiser Cancelar ou Concluir Orçamento de Churras, porque eu não deixo para optar manualmente para não burlar processo de aprovação
 
+- 🔲 Criar regra de validação para Inicio e Fim não ser menor que hoje
+- 🔲 Criar regra de validação para mensagem de erro de Contato Nulo
+- 🔲 Melhorar layout dos fluxos de tela ( Centralizar mensagens )
 - 🔲 Formatação de telefone
-- 🔲 Atribuir botão de Concluído por LWC? ou Verificar através da Data Fim para Alterar para Concluído automaticamente
 - 🔲 Fazer desconto de 5% ou 10% se for mês de aniversârio do contato atrelado ao Orçamento
 - 🔲 Criar tarefa para o usuário para lembrar de por o CPF para solicitar o orçamento*
-- 🔲 Fazer botão concluído após Data do FIM ou botão para usuário fazer essa ação ( Quick Action ), Vou deixar um campo de observações caso ele necessite reagendar outro agendamento, ou reativar o processo para aprovação novamente
 
 
