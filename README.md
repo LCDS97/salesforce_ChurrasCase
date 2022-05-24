@@ -53,6 +53,7 @@
     - ☑️ **Orçamento de churras:** Campo de relacionamento com o objeto *[Orçamento de churras](#OrcamentoChurras)* - **Mestre-Detalhe**
     - ☑️ **Nota:** Campo numérico que representa a nota de 0 a 10 pela organização do evento
     - ☑️ **Observações:** Campo área de texto que representa as observações da nota dada
+    - ☑️ **Avaliador:** Campo área de texto que representa quem criou aquela avaliação ( Campo opcional para o Cliente)
 
 
 <details><summary>📷 Print do Schema Builder e ligações dos Objetos Criados e Requisitados:</summary>
@@ -293,7 +294,7 @@ tela de forma organizada.
 
 ---
 
-- 🔲 **5. Validação de itens duplicados no churras**
+- ✅ **5. Validação de itens duplicados no churras**
 
     **a.** *Toda vez que um item de churras for criado, o Apex Trigger deverá verificar se o churras já possui um item com o mesmo produto cadastrado.*
 
@@ -308,6 +309,12 @@ tela de forma organizada.
 #### Classes em Ordem para Verificar
 
 - ✅ *Schedule e Batch*
+- 🔲 *Trigger - Validação de Itens duplicados*
+    * TriggerItensOrcamento
+    * ItemOrcamentoChurrasBO
+    * ItemOrcamentoChurrasDAO
+
+
 
 
 
@@ -334,6 +341,7 @@ tela de forma organizada.
 - ✅ Usuário não consegue mudar o Status sem passar pelo processo de aprovação
     > Filtragem do botão pelo Lightning Page e remoção do Status Concluído
 - ✅ Criei Flow para permitir depois de Agendado se quiser Cancelar ou Concluir Orçamento de Churras, porque eu não deixo para optar manualmente para não burlar processo de aprovação
+- ✅ Criei campo de Lookup ( Contact ) Avaliador para armazenar opcionalmente quem faz aquela avaliação
 
 - 🔲 Criar regra de validação para Inicio e Fim não ser menor que hoje
 - 🔲 Criar regra de validação para mensagem de erro de Contato Nulo

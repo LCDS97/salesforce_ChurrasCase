@@ -1,13 +1,13 @@
 import { LightningElement, api, track } from 'lwc';
 
-import buscarAvaliacoesPorOrcamentoService from '@/salesforce/apex/AvaliarChurrasController.buscarAvalicoesPorOrcamentoChurras';
+import buscarAvaliacoesPorOrcamentoService from '@salesforce/apex/AvaliarChurrasController.buscarAvaliacoesPorOrcamentoChurras';
 
 export default class AvaliarOrcamentoChurras extends LightningElement {
 
     @api recordId;
 
-    @track lstAvalicaoes = [];
-    @track lstAvalicaoesFiltradas = [];
+    @track lstAvaliacoes = [];
+    @track lstAvaliacoesFiltradas = [];
     @track apresentarAvaliacoes = true;
 
     connectedCallback(){
@@ -22,10 +22,10 @@ export default class AvaliarOrcamentoChurras extends LightningElement {
 
                 }
 
-                this.lstAvalicaoes = response.lstAvalicaoes;
-                this.lstAvalicaoesFiltradas = response.lstObject;
+                this.lstAvaliacoes = response.lstAvaliacoes;
+                this.lstAvaliacoesFiltradas = response.lstObject;
             })
-            .catch(response => {
+            .catch(error => {
                 console.log(error);
             })
     }

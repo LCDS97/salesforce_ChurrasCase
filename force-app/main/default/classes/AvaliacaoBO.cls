@@ -31,6 +31,7 @@ public with sharing class AvaliacaoBO {
             avaliacaoTO.id = avaliacao.id;
             avaliacaoTO.nota = avaliacao.Nota__c;
             avaliacaoTO.observacoes = avaliacao.Observacoes__c;
+            avaliacaoTO.avaliador = avaliacao.Avaliador__r.Name;
 
             lstAvaliacoesTO.add(avaliacaoTO);
         }
@@ -48,6 +49,7 @@ public with sharing class AvaliacaoBO {
             avaliacao.id = avaliacaoTO.id;
             avaliacao.Nota__c = avaliacaoTO.nota;
             avaliacao.Observacoes__c = avaliacaoTO.observacoes;
+            avaliacao.Avaliador__c = avaliacaoTO.avaliador;
 
             lstAvaliacoes.add(avaliacao);
         }

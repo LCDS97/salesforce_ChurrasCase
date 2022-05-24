@@ -5,7 +5,9 @@ public with sharing class AvaliacaoDAO {
                 SELECT
                     Id,
                     Nota__c,
-                    Observacoes__c
+                    Observacoes__c,
+                    Avaliador__c,
+                    Avaliador__r.Name
                 FROM
                     Avaliacao__c
                 WHERE

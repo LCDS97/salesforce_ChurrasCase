@@ -3,6 +3,24 @@
         <div class="slds-grid slds-gutters">
             <div class="slds-col slds-size_1-of-3">
               <span>Melhoras avalições desse Churras</span>
+              <table>
+                  <thead>
+                      <th>Avaliador</th>
+                      <th>Nota</th>
+                      <th>Observacoes</th>
+                  </thead>
+                  <tbody>
+                      <template if:true={apresentarAvaliacoes}>
+                        <template for:each={lstAvaliacoesFiltradas} for:item="avaliacao">
+                            <tr key={avaliacao.id}>
+                                <td>{avaliacao.avaliador}</td>
+                                <td>{avaliacao.nota}</td>
+                                <td>{avaliacao.observacoes}</td>
+                            </tr>
+                        </template>
+                      </template>
+                  </tbody>
+              </table>
             </div>
             <div class="slds-col slds-size_1-of-3">
               <span>2</span>

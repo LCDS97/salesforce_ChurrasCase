@@ -3,7 +3,7 @@
 private class BatchCancelarOrcamentoChurrasTest{
     @TestSetup
     static void dataSetup(){
-        TestDataFactory.criarOrcamentoComItens(2,2);   
+        TestDataFactory.criarOrcamentoComContato(2,2);   
     }
 
     @isTest 

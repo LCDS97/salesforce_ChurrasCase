@@ -1,6 +1,6 @@
 public with sharing class AvaliarChurrasController {
     @AuraEnabled
-    public static ResponseTO buscarAvalicoesPorOrcamentoChurras(Id idOrcamentoChurras){
+    public static ResponseTO buscarAvaliacoesPorOrcamentoChurras(Id idOrcamentoChurras){
         return AvaliacaoBO.buscarAvaliacoesPorOrcamentoChurras(idOrcamentoChurras);
     }
 }

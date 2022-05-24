@@ -8,4 +8,7 @@ public with sharing class AvaliacaoTO {
     @AuraEnabled
     public String observacoes { get;set; }
 
+    @AuraEnabled
+    public String avaliador { get;set; }
+
 }

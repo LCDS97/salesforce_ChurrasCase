@@ -14,7 +14,39 @@ public class TestDataFactory{
     }
 
 
-    public static List<OrcamentoChurras__c> criarOrcamentoComItens(Integer numcontatoPerOrcamento, Integer numOrcamentos){
+    public static List<OrcamentoChurras__c> criarOrcamentoComContato(Integer numcontatoPerOrcamento, Integer numOrcamentos){
+      
+      List<Contact> contatos = new List<Contact>();
+      for(Integer i=0;i<numcontatoPerOrcamento;i++) {
+          Contact c = new Contact(
+                                FirstName='Test',
+                                LastName='Contact' + i,
+                                CPF__c='498.282.820-20');
+          contatos.add(c);
+      }
+      insert contatos;
+
+
+      List<OrcamentoChurras__c> orcamentos = new List<OrcamentoChurras__c>();
+  
+      for(Integer c = 0; c < numOrcamentos; c++){
+        Contact contato = contatos[c];
+
+        for(Integer k = 0; k < numcontatoPerOrcamento; k++){
+          orcamentos.add(new OrcamentoChurras__c(
+            Name='Orcamento numero ' + k,
+            Contato__c=contato.Id,
+            Fim__c= Date.Today() - 2,
+            Status__c = 'Novo'));
+        }
+      }
+
+      insert orcamentos;
+      return orcamentos;
+      
+    }
+
+    public static List<OrcamentoChurras__c> criarOrcamentoComContatoItens(Integer numcontatoPerOrcamento, Integer numOrcamentos){
       
       List<Contact> contatos = new List<Contact>();
       for(Integer i=0;i<numcontatoPerOrcamento;i++) {
