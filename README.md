@@ -243,10 +243,7 @@ tela de forma organizada.
 
 - 🔲 **2. Batch de cancelamento de orçamento de churras não realizados**
 
-    - 🔲 **a.** *Um trabalho diário, escrito em Apex (Scheduler/Batch) que cancelará os orçamentos de churras que não aconteceram após a data prevista.*
-        - Se for para Novo cancelar no dia seguinte.
-        - Se for para Agendado cancelar dois dias depois.
-            Porque? No meu caso o cliente vai ter um botão para concluir o evento após o agendado for no dia do Fim e para cancelar também
+    - ✅ **a.** *Um trabalho diário, escrito em Apex (Scheduler/Batch) que cancelará os orçamentos de churras que não aconteceram após a data prevista.*
 
 ---
     
@@ -307,6 +304,12 @@ tela de forma organizada.
 ## Testes
 
 - 🔲 **Classes de teste:** *Cada classe deve estar coberta com ao menos 75% testes unitários e testando cada funcionalidade.*
+
+#### Classes em Ordem para Verificar
+
+- ✅ *Schedule e Batch*
+
+
 
 ## Usuário de Teste
 
