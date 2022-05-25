@@ -1,9 +1,7 @@
 <template>
-    <lightning-card variant="narrow" icon-name="standard">
-        <h2>Deixe aqui sua avaliação da sua experiência desse Churras</h2>
+    <lightning-card variant="narrow" title="Melhroas avaliações desse Churras" icon-name="standard">
         <div class="slds-grid slds-gutters">
             <div class="slds-col slds-size_1-of-2">
-              <h3>Melhoras avalições desse Churras</h3>
               <table>
                   <thead>
                       <th>Avaliador</th>
@@ -34,17 +32,19 @@
               <lightning-card title="Se quiser, conte como foi sua experiência e uma nota para o Churras que foi concluído">
                   <div class="slds-p-horizontal_small">
                         <lightning-record-edit-form object-api-name="Avaliacao__c"  onsuccess={handleSuccess}>
-                            <lightning-messages> </lightning-messages>
-                            <lightning-input-field field-name="OrcamentoChurras__c" value={recordId} disabled="true"> </lightning-input-field>
-                            <lightning-input-field field-name="Nota__c"> </lightning-input-field>
-                            <lightning-input-field field-name="Observacoes__c"> </lightning-input-field>
-                            <lightning-input-field field-name="Avaliador__c" value={recordId.Contato__c}> </lightning-input-field>
-                            <lightning-button
-                                class="slds-m-top_small"
-                                type="submit"
-                                label="Inserir avaliação"
-                            >
-                            </lightning-button>
+                            <template if:true={orcamento.data}>
+                                <lightning-messages> </lightning-messages>
+                                <lightning-input-field field-name="OrcamentoChurras__c" value={recordId} disabled="true"> </lightning-input-field>
+                                <lightning-input-field class="avaliacaoResetar" field-name="Nota__c"> </lightning-input-field>
+                                <lightning-input-field class="avaliacaoResetar" field-name="Observacoes__c"> </lightning-input-field>
+                                <lightning-input-field field-name="Avaliador__c" value={avaliadorAtual} disabled="true"> </lightning-input-field>
+                                <lightning-button
+                                    class="slds-m-top_small"
+                                    type="submit"
+                                    label="Inserir avaliação"
+                                >
+                                </lightning-button>
+                      </template>
                         </lightning-record-edit-form>
                   </div>
               </lightning-card>

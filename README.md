@@ -228,17 +228,17 @@ tela de forma organizada.
 
 ## Desafio de Desenvolvimento
 
-- 🔲 **1. Componente de avaliação do churras**
+- ✅ **1. Componente de avaliação do churras**
 
-    - 🔲 **a.** *Criar um componente em LWC que permita o usuário avaliar o churras quando ele for concluído*
+    - ✅ **a.** *Criar um componente em LWC que permita o usuário avaliar o churras quando ele for concluído*
 
-    - 🔲 **b.** *O componente deverá ser exibido apenas quando o status estiver "Concluído" na tela do churras*
+    - ✅ **b.** *O componente deverá ser exibido apenas quando o status estiver "Concluído" na tela do churras*
 
-    - 🔲 **c.** *O componente deve permitir que o usuário coloque a nota e as observações do churras*
+    - ✅ **c.** *O componente deve permitir que o usuário coloque a nota e as observações do churras*
 
-    - 🔲 **d.** *Ao fim da avaliação, um registro deverá ser salvo no Salesforce no objeto (Avaliação)*
+    - ✅ **d.** *Ao fim da avaliação, um registro deverá ser salvo no Salesforce no objeto (Avaliação)*
 
-    - 🔲 **CSS: Editar os    botões com classe de CSS e aplicar tanto fora quanto dentro de um form**
+    - 🔲 **CSS: Editar os botões com classe de CSS e aplicar tanto fora quanto dentro de um form**
 
 ---
 
