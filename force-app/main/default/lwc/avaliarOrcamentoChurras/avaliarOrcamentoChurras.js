@@ -1,4 +1,5 @@
 import { LightningElement, api, track } from 'lwc';
+import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 import buscarAvaliacoesPorOrcamentoService from '@salesforce/apex/AvaliarChurrasController.buscarAvaliacoesPorOrcamentoChurras';
 
@@ -28,6 +29,18 @@ export default class AvaliarOrcamentoChurras extends LightningElement {
             .catch(error => {
                 console.log(error);
             })
+    }
+
+    handleSuccess(event){
+        this.showToast();
+    }
+
+    showToast() {
+        const event = new ShowToastEvent({
+            title: 'Sucesso!',
+            message: 'Sua avaliação foi inserida com sucesso!',
+        });
+        this.dispatchEvent(event);
     }
 
 
