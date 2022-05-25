@@ -264,16 +264,16 @@ tela de forma organizada.
 
 **Setup para cumprir requisito:**
 
-- 🔲  Criar um Custom Metadata Type chamado “Tabela de preço de serviços”
+- ✅  Criar um Custom Metadata Type chamado “Tabela de preço de serviços”
 
 **Esse objeto terá dois campos:**
 
-- 🔲 **1.** *Serviço (Campo picklist que representa o tipo de serviço)*
+- ✅ **1.** *Serviço (Campo picklist que representa o tipo de serviço)*
     - **a.** *Churrasqueiro*
     - **b.** *Limpeza*
     - **c.** *Garçom*
 
-- 🔲 **2.** *Valor hora do serviço (Campo moeda que representa o valor hora do tipo de serviço que será prestado).*
+- ✅ **2.** *Valor hora do serviço (Campo moeda que representa o valor hora do tipo de serviço que será prestado).*
 
 *Cadastrar três registros desse objeto:*
     - **Serviço de Churrasqueiro** | **Tipo:** *Churrasqueiro* | **Valor Hora do Serviço**: *20*
