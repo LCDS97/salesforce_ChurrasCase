@@ -282,7 +282,7 @@ tela de forma organizada.
 
 - 🔲 **1. Desenvolver um Apex Trigger que preencherá o valor no item do churras quando um for criado e o produto vinculado for do tipo serviço.**
 
-    - 🔲 **a.** *Quando o produto vinculado for do tipo **PRODUTO**, o valor deverá ser preenchido com a multiplicação da quantidade x custo do produto*
+    - ✅ **a.** *Quando o produto vinculado for do tipo **PRODUTO**, o valor deverá ser preenchido com a multiplicação da quantidade x custo do produto*
 
     - 🔲 **b.** *Quando o produto for do tipo **SERVIÇO**, o valor deverá ser preenchido conforme a quantidade, duração em horas do evento multiplicado pelo valor hora do tipo de serviço cadastrado nos metadados acima.*
 

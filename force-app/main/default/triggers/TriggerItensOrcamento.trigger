@@ -1,7 +1,16 @@
-trigger TriggerItensOrcamento on ItemOrcamentoChurras__c (before insert) {
+trigger TriggerItensOrcamento on ItemOrcamentoChurras__c (before insert, before update) {
 
-        if(Trigger.operationType == TriggerOperation.BEFORE_INSERT) {
-            ItemOrcamentoChurrasBO.validarSePossuiItemDuplicado(Trigger.new);
+        
+        if(Trigger.isBefore){
+            if(Trigger.isInsert){
+                ItemOrcamentoChurrasBO.validarSePossuiItemDuplicado(Trigger.new);
+                ItemOrcamentoChurrasBO.preencherValorAutomatico(Trigger.new);
+            }
+            
+            if(Trigger.isUpdate){
+                ItemOrcamentoChurrasBO.preencherValorAutomatico(Trigger.new);
+            }
+            
         }
 
 }

@@ -18,7 +18,7 @@ public with sharing class ItemOrcamentoChurrasBO {
         List<ItemOrcamentoChurras__c> lstProdutoRepetidoItemOrcamento = ItemOrcamentoChurrasDAO.buscarItemOrcamentoPorIdEProduto(setOrcamentosId,setProdutosItemOrcamentoId);
 
         for(ItemOrcamentoChurras__c produto : lstItensOrcamentosComProduto){
-            if(lstProdutoRepetidoItemOrcamento.size() > 1){
+            if(lstProdutoRepetidoItemOrcamento.size() >= 1){
                 produto.Produto__c.addError('Não é possível cadastrar esse produto, pois ele ja consta em um Item de Orçamento');
             }
         }
@@ -36,28 +36,32 @@ public with sharing class ItemOrcamentoChurrasBO {
         Decimal valorHoraLimpeza = valorLimpeza.ValorHoraServico__c;
 
         List<ItemOrcamentoChurras__c> lstItensComProduto = new List<ItemOrcamentoChurras__c>();
+        List<ItemOrcamentoChurras__c> lstItensOrcamentosUpdate = new List<ItemOrcamentoChurras__c>();
         List<Product2> lstProdutoTipoProduto = new List<Product2>();
         List<Product2> lstProdutoTipoServico = new List<Product2>();
         Set<Id> setIdsProdutos = new Set<Id>();
+        Set<Id> setIdsOrcamentos = new Set<Id>();
 
         for(ItemOrcamentoChurras__c item : lstItensOrcamentosNovo){
-            if(item.Produto__c != null){
+            //if(item.Produto__c != null){
                 lstItensComProduto.add(item);
                 setIdsProdutos.add(item.Produto__c);
-            }
+                setIdsOrcamentos.add(item.OrcamentoChurras__c);
+           // }
         }
         System.debug('############ LST Itens com Produto' + lstItensComProduto);
 
         if(lstItensComProduto.isEmpty()) return;
 
         List<Product2> verificarTipoRegistroProduto = Product2DAO.buscarProdutosTipoRegistro(setIdsProdutos);
-        
+        List<OrcamentoChurras__c> lstOrcamentosChurras = OrcamentoChurrasDAO.buscarOrcamentosChurras(setIdsOrcamentos);
+
+
+
         for(Product2 produto : verificarTipoRegistroProduto){
             if(produto.RecordTypeId == '0128a000001ANe0AAG'){  // Record Type Id = Produto
                 //lstProdutoTipoProduto.add(produto);
                 for(ItemOrcamentoChurras__c itemOrcamento : lstItensComProduto){
-                    System.debug('###### antes do soma Orcamento Nome: ' + itemOrcamento.Name);
-                    System.debug('###### antes do soma Orcamento Item: ' + itemOrcamento.Valor__c);
                     if(itemOrcamento.Valor__c == null && itemOrcamento.Quantidade__c == null){
                         itemOrcamento.Valor__c = 0;
                         itemOrcamento.Quantidade__c = 0;
@@ -65,15 +69,35 @@ public with sharing class ItemOrcamentoChurrasBO {
                     } else {
                         itemOrcamento.Valor__c = itemOrcamento.Quantidade__c * produto.Valor__c;
                     }
-                    System.debug('###### Depois da soma Orcamento Item: ' + itemOrcamento.Valor__c);
+                    lstItensOrcamentosUpdate.add(itemOrcamento);
                 }
 
             }
             
-            if(produto.RecordTypeId == '0128a000001ANcgAAG') lstProdutoTipoServico.add(produto); // Record Type Id = Serviço
+             if(produto.RecordTypeId == '0128a000001ANcgAAG'){ // Record Type Id = Serviço
+                for(OrcamentoChurras__c orcamento : lstOrcamentosChurras){
+                    Integer horaInicio = orcamento.Inicio__c.hour();
+                    Integer horaFim = orcamento.Fim__c.hour();
+
+                    Integer horaEvento = (horaInicio - horaFim);
+
+                        for(ItemOrcamentoChurras__c itemOrcamento : lstItensComProduto){
+                            if(produto.Servico__c == 'Churrasqueiro'){
+                                itemOrcamento.Valor__c = itemOrcamento.Quantidade__c * ( horaEvento * valorHoraChurrasqueiro);
+                            }
+                            if(produto.Servico__c == 'Limpeza'){
+                                itemOrcamento.Valor__c = itemOrcamento.Quantidade__c * ( horaEvento * valorHoraChurrasqueiro);
+                            }
+                            if(produto.Servico__c == 'Garcom'){
+                                itemOrcamento.Valor__c = itemOrcamento.Quantidade__c * ( horaEvento * valorHoraChurrasqueiro);
+                            }
+
+                            lstItensOrcamentosUpdate.add(itemOrcamento);
+                        }
+                }
+            }
         }
         
-
     }
 
 }

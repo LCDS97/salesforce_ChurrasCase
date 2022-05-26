@@ -4,7 +4,8 @@ public with sharing class Product2DAO {
                 SELECT
                     Id,
                     Valor__c,
-                    RecordTypeId
+                    RecordTypeId,
+                    Servico__c
                 FROM
                     Product2
                 WHERE
