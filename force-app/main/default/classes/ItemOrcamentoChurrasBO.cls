@@ -36,7 +36,6 @@ public with sharing class ItemOrcamentoChurrasBO {
         Decimal valorHoraLimpeza = valorLimpeza.ValorHoraServico__c;
 
         List<ItemOrcamentoChurras__c> lstItensComProduto = new List<ItemOrcamentoChurras__c>();
-        List<ItemOrcamentoChurras__c> lstItensOrcamentosUpdate = new List<ItemOrcamentoChurras__c>();
         List<Product2> lstProdutoTipoProduto = new List<Product2>();
         List<Product2> lstProdutoTipoServico = new List<Product2>();
         Set<Id> setIdsProdutos = new Set<Id>();
@@ -49,7 +48,6 @@ public with sharing class ItemOrcamentoChurrasBO {
                 setIdsOrcamentos.add(item.OrcamentoChurras__c);
            // }
         }
-        System.debug('############ LST Itens com Produto' + lstItensComProduto);
 
         if(lstItensComProduto.isEmpty()) return;
 
@@ -69,30 +67,48 @@ public with sharing class ItemOrcamentoChurrasBO {
                     } else {
                         itemOrcamento.Valor__c = itemOrcamento.Quantidade__c * produto.Valor__c;
                     }
-                    lstItensOrcamentosUpdate.add(itemOrcamento);
                 }
 
             }
             
              if(produto.RecordTypeId == '0128a000001ANcgAAG'){ // Record Type Id = Serviço
                 for(OrcamentoChurras__c orcamento : lstOrcamentosChurras){
-                    Integer horaInicio = orcamento.Inicio__c.hour();
-                    Integer horaFim = orcamento.Fim__c.hour();
+                    System.debug('##### Orcamento' + orcamento);
+                    Long horaInicio = orcamento.Inicio__c.getTime();
+                    Long horaFim = orcamento.Fim__c.getTime();
+                    
+                    Double horaEvento = Math.floor(horaInicio - horaFim);
 
-                    Integer horaEvento = (horaInicio - horaFim);
+                    Double mins = horaEvento / 60000;
+                    Double hours = mins / 60;
+                    Double remainingMins = mins - ( hours * 60);
+                    Double hoursMinutes = hours + remainingMins;
 
+                    Double horaEventoConvertida = Math.floor(hoursMinutes);
+
+                    System.debug('##### Hora' + hours);
+                    System.debug('##### Minutos restantes' + remainingMins);
+                    System.debug('##### Horas e Minutos restantes' + hoursMinutes);
+                    System.debug('##### Hora Evento' + horaEventoConvertida);
+
+                    
+
+                    
+                    
                         for(ItemOrcamentoChurras__c itemOrcamento : lstItensComProduto){
                             if(produto.Servico__c == 'Churrasqueiro'){
-                                itemOrcamento.Valor__c = itemOrcamento.Quantidade__c * ( horaEvento * valorHoraChurrasqueiro);
+                                itemOrcamento.Valor__c = itemOrcamento.Quantidade__c * ( horaEventoConvertida * valorHoraChurrasqueiro);
+                                System.debug('##### Valor do item Orçamento Churrasqueiro' + itemOrcamento.Valor__c);
                             }
                             if(produto.Servico__c == 'Limpeza'){
-                                itemOrcamento.Valor__c = itemOrcamento.Quantidade__c * ( horaEvento * valorHoraChurrasqueiro);
+                                itemOrcamento.Valor__c = itemOrcamento.Quantidade__c * ( horaEventoConvertida * valorHoraLimpeza);
+                                System.debug('##### Valor do item Orçamento Limpeza' + itemOrcamento.Valor__c);
                             }
                             if(produto.Servico__c == 'Garcom'){
-                                itemOrcamento.Valor__c = itemOrcamento.Quantidade__c * ( horaEvento * valorHoraChurrasqueiro);
+                                itemOrcamento.Valor__c = itemOrcamento.Quantidade__c * ( horaEventoConvertida * valorHoraGarcom);
+                                System.debug('##### Valor do item Orçamento Garçom' + itemOrcamento.Valor__c);
                             }
 
-                            lstItensOrcamentosUpdate.add(itemOrcamento);
                         }
                 }
             }
