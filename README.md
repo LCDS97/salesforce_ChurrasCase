@@ -375,4 +375,50 @@ tela de forma organizada.
 - ✅ Criar regra de validação para mensagem de erro de Contato Nulo
 - ❌ Formatação de telefone
 
+## Pontos para incrementar
+
+- 🔲 Fazer classe de Testes, entender melhor a questão do System.assertEquals sempre é necessário eu fazer a comparação após ser acionado
+        Ex: Trigger que atualiza tal coisa, eu preciso confirmar o que alterou depois
+- 🔲 Colocar para enviar e-mail do contato e não do User
+- 🔲 Quando cancelar o evento, pode voltar para Novo.
+- 🔲 Fiz o Schedule e não agendei para acontecer todo dia, somente fiz uma execução para testar
+    - Mostrar no Apex Jobs - O batch processado, mas não feito o schedule diario
+- 🔲 No Flow, muitas dificuldades para entender alguns processos manuais ( nextApproversId ), se não definisse um aprovador automatico não consegui fazer
+    - 🔲 Não consegui verificar o tipo de Registro ( Ele verifica somente se tem Item ou não )
+- 🔲 Esqueci de colocar valor Total no Orçamento de Churras em relação ao Item total do Orçamento
+- 🔲 Mostrar sobre o que eu usei no LWC para inserir registro [lightning-record-edit-form](https://developer.salesforce.com/docs/component-library/bundle/lightning-record-edit-form/documentation)
+
+### Script para amanhã
+
+1. - Criação de Contato
+    - 🔲 Primeiro sem CPF ( Pode ser inserido )
+    - 🔲 CPF duplicado ( Regra duplicata )
+    Flow que criei ( Mostrar Flow )
+        - 🔲 Mostrar formatação do CPF
+        - 🔲 Mostrar que só aceita CPF validos
+
+2. - Criando Orçamento de Churras e Itens de Orçamento e Produtos
+    - 🔲 Criação de Orçamento sem Contato ( Regra de Validação adicional )
+    - 🔲 Criação de Orçamento sem CPF ( Regra de Validação )
+    - 🔲 Mostrar Data de Ínicio e Fim não pode ser menor que hoje ( Regra de Validação )
+    - 🔲 Mostrar Data de Fim não pode ser menor que Data de Ínicio ( Regra de Validação )
+    Approval Proccess ( Flow )
+        Explicar que meu Status não deixei para o usuário alterar, retirei através do Lightning Page
+        - 🔲 Mostrar somente sem Itens, vai tirar
+        - 🔲 Mostrar somente com Itens enviado para aprovação
+            - 🔲 Mostra agora sobre os Itens de Orçamento
+                - 🔲 Explicar sobre a Trigger de calculo do Produto
+                    - 🔲 Produto multiplicado pela quantidade x valor Produto
+                    - 🔲 Produto de acordo com o Metadata do Serviço
+                    - 🔲 Falar sobre Bug quando a hora é a mesma hora da Data, ele gera com o valor Zero, mas ao gerar para outra hora e outros dias a Trigger aciona corretamente
+                - 🔲 Mostrar a Trigger de somente produto ativo, ser adicionado no Orçamento
+
+        - 🔲 Mostrar sobre os botões de Concluir ou Cancelar ( Simular as 3 situações - Agendar sem alterar a Data / Agendar com Data Alterada / Cancelar)
+        - 🔲 Mostrar o LWC e relembrar a questão que só esta disponivel somente para Concluído e mostrar depois sobre os update
+            Tanto o template false como o template true
+
+            Admin, Admin Advanced, Dev I, Dev II e App Builder - Tableau CRM
+
+
+
 
