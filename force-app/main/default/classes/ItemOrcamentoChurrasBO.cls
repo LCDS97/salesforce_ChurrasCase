@@ -77,7 +77,7 @@ public with sharing class ItemOrcamentoChurrasBO {
                     Long horaInicio = orcamento.Inicio__c.getTime();
                     Long horaFim = orcamento.Fim__c.getTime();
                     
-                    Double horaEvento = Math.floor(horaInicio - horaFim);
+                    Double horaEvento = Math.floor(horaFim - horaInicio );
 
                     Double mins = horaEvento / 60000;
                     Double hours = mins / 60;
@@ -86,27 +86,16 @@ public with sharing class ItemOrcamentoChurrasBO {
 
                     Double horaEventoConvertida = Math.floor(hoursMinutes);
 
-                    System.debug('##### Hora' + hours);
-                    System.debug('##### Minutos restantes' + remainingMins);
-                    System.debug('##### Horas e Minutos restantes' + hoursMinutes);
-                    System.debug('##### Hora Evento' + horaEventoConvertida);
-
-                    
-
-                    
                     
                         for(ItemOrcamentoChurras__c itemOrcamento : lstItensComProduto){
                             if(produto.Servico__c == 'Churrasqueiro'){
-                                itemOrcamento.Valor__c = itemOrcamento.Quantidade__c * ( horaEventoConvertida * valorHoraChurrasqueiro);
-                                System.debug('##### Valor do item Orçamento Churrasqueiro' + itemOrcamento.Valor__c);
+                                itemOrcamento.Valor__c = itemOrcamento.Quantidade__c * ( valorHoraChurrasqueiro * horaEventoConvertida);
                             }
                             if(produto.Servico__c == 'Limpeza'){
-                                itemOrcamento.Valor__c = itemOrcamento.Quantidade__c * ( horaEventoConvertida * valorHoraLimpeza);
-                                System.debug('##### Valor do item Orçamento Limpeza' + itemOrcamento.Valor__c);
+                                itemOrcamento.Valor__c = itemOrcamento.Quantidade__c * ( valorHoraLimpeza * horaEventoConvertida);
                             }
                             if(produto.Servico__c == 'Garcom'){
-                                itemOrcamento.Valor__c = itemOrcamento.Quantidade__c * ( horaEventoConvertida * valorHoraGarcom);
-                                System.debug('##### Valor do item Orçamento Garçom' + itemOrcamento.Valor__c);
+                                itemOrcamento.Valor__c = itemOrcamento.Quantidade__c * ( valorHoraGarcom * horaEventoConvertida);
                             }
 
                         }

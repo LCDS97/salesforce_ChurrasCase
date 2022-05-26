@@ -214,15 +214,13 @@ tela de forma organizada.
 
 ⚠️ *Falta tirar prints dos layouts de registros* ⚠️
 
-- 🔲 **13.** Construir relatórios e painéis para análise dos KPI’s (Key Performance Indicator)
-    - Maiores Orçamentos
-    - Itens por Orçamento
-    - Clientes novos por Mês
-    - Clientes com possiblidade de fazer um orçamento
-    - Orçamentos Agendados x Orçamentos Cancelados
-    - Orçamentos Concluídos
-    - Avaliações por Orçamento
+- ✅ **13.** Construir relatórios e painéis para análise dos KPI’s (Key Performance Indicator)
+    - Produtos por Orçamentos de Churras
+    - Média de Avaliações por Orçamento
+    - Clientes com Mais Orçamentos de Churras
+    - Orçamento por Status
 
+⚠️ *Falta tirar prints dos report e dashboard* ⚠️
 
 ---
 
@@ -237,8 +235,6 @@ tela de forma organizada.
     - ✅ **c.** *O componente deve permitir que o usuário coloque a nota e as observações do churras*
 
     - ✅ **d.** *Ao fim da avaliação, um registro deverá ser salvo no Salesforce no objeto (Avaliação)*
-
-    - 🔲 **CSS: Editar os botões com classe de CSS e aplicar tanto fora quanto dentro de um form**
 
 ---
 
@@ -260,7 +256,7 @@ tela de forma organizada.
 
 ---
 
-- 🔲 **4. Preenchimento automático do campo Valor no item do churras - Esclarecer sobre esse requisito com o Bruno/Fabrício** 
+- ✅ **4. Preenchimento automático do campo Valor no item do churras - Esclarecer sobre esse requisito com o Bruno/Fabrício** 
 
 **Setup para cumprir requisito:**
 
@@ -280,15 +276,15 @@ tela de forma organizada.
     - **Serviço de Limpeza** | **Tipo:** *Limpeza* | **Valor Hora do Serviço**: *30*
     - **Serviço de Garçom** | **Tipo:** *Garçom* | **Valor Hora do Serviço**: *25*
 
-- 🔲 **1. Desenvolver um Apex Trigger que preencherá o valor no item do churras quando um for criado e o produto vinculado for do tipo serviço.**
+- ✅ **1. Desenvolver um Apex Trigger que preencherá o valor no item do churras quando um for criado e o produto vinculado for do tipo serviço.**
 
     - ✅ **a.** *Quando o produto vinculado for do tipo **PRODUTO**, o valor deverá ser preenchido com a multiplicação da quantidade x custo do produto*
 
-    - 🔲 **b.** *Quando o produto for do tipo **SERVIÇO**, o valor deverá ser preenchido conforme a quantidade, duração em horas do evento multiplicado pelo valor hora do tipo de serviço cadastrado nos metadados acima.*
+    - ✅ **b.** *Quando o produto for do tipo **SERVIÇO**, o valor deverá ser preenchido conforme a quantidade, duração em horas do evento multiplicado pelo valor hora do tipo de serviço cadastrado nos metadados acima.*
 
     *(Ex.: Se contratado o serviço de 1 churrasqueiro, e o evento durar 5 horas, esse item deverá custar 100 reais.)*
 
-    - 🔲 **c.** *Caso a duração do evento dure em tempo quebrado, a duração para o cálculo deverá ser arredondada para cima.*
+    - ✅ **c.** *Caso a duração do evento dure em tempo quebrado, a duração para o cálculo deverá ser arredondada para cima.*
 
     *(Ex.: Se o início for 12:00 e o fim 13:30, a duração será de 2 horas.)*
 
@@ -342,12 +338,8 @@ tela de forma organizada.
     > Filtragem do botão pelo Lightning Page e remoção do Status Concluído
 - ✅ Criei Flow para permitir depois de Agendado se quiser Cancelar ou Concluir Orçamento de Churras, porque eu não deixo para optar manualmente para não burlar processo de aprovação
 - ✅ Criei campo de Lookup ( Contact ) Avaliador para armazenar opcionalmente quem faz aquela avaliação
-
-- 🔲 Criar regra de validação para Inicio e Fim não ser menor que hoje
-- 🔲 Criar regra de validação para mensagem de erro de Contato Nulo
-- 🔲 Melhorar layout dos fluxos de tela ( Centralizar mensagens )
+- ✅ Criar regra de validação para Inicio e Fim não ser menor que hoje
+- ✅ Criar regra de validação para mensagem de erro de Contato Nulo
 - 🔲 Formatação de telefone
-- 🔲 Fazer desconto de 5% ou 10% se for mês de aniversârio do contato atrelado ao Orçamento
-- 🔲 Criar tarefa para o usuário para lembrar de por o CPF para solicitar o orçamento*
 
 
