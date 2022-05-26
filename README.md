@@ -169,8 +169,6 @@
 
     </details>
 
-    ### ⚠️Atualizar print pelo Campo aprovade para False agora ⚠️
-
     - **a.** *Quando submetido, o campo Status deve ser alterado automaticamente para "Em aprovação"*
         <details><summary>📷 Evidência:</summary>
 
@@ -206,13 +204,36 @@
 - ✅ **11.** Os layouts dos registros também serão avaliados, portanto, remova os campos não
 utilizados.
 
-⚠️ *Falta tirar prints dos layouts de registros* ⚠️
-
-
 - ✅ **12.** Os Lightning Pages também serão avaliados, é importante que distribua os componentes da
 tela de forma organizada.
 
-⚠️ *Falta tirar prints dos layouts de registros* ⚠️
+    <details><summary>📷 Print dos Lightning Page e Layout de Registro:</summary>
+    <p><strong>Home</strong></p>
+    
+    ![RN-LP](./assets/LP-Home.png)
+
+    <p><strong>Contato</strong></p>
+
+    ![RN-LP](./assets/LP-Contato.png)
+
+    
+    <p><strong>Orçamento</strong></p>
+
+    ![RN-LP](./assets/LP-OrcamentoChurras.png)
+
+    <p><strong>Item do Orçamento</strong></p>
+
+    ![RN-LP](./assets/LP-ItensOrcamento.png)
+
+    <p><strong>Produto</strong></p>
+
+    ![RN-LP](./assets/LP-Produto.png)
+
+    <p><strong>Avaliação</strong></p>
+
+    ![RN-LP](./assets/LP-Avaliacao.png)
+
+    </details>
 
 - ✅ **13.** Construir relatórios e painéis para análise dos KPI’s (Key Performance Indicator)
     - Produtos por Orçamentos de Churras
@@ -220,7 +241,11 @@ tela de forma organizada.
     - Clientes com Mais Orçamentos de Churras
     - Orçamento por Status
 
-⚠️ *Falta tirar prints dos report e dashboard* ⚠️
+    <details><summary>📷 Print do Dashboard:</summary>
+
+    ![RN-KPI](./assets/RegrasDeNegocio-KPI.png)
+
+    </details>
 
 ---
 
@@ -252,8 +277,6 @@ tela de forma organizada.
 
     - ✅ **c.** *Caso o orçamento de churras não tenha nenhum item de serviço, o Status deverá ser atualizado automaticamente para "Agendado"*
 
-    ### Tirar Evidência depois ###
-
 ---
 
 - ✅ **4. Preenchimento automático do campo Valor no item do churras - Esclarecer sobre esse requisito com o Bruno/Fabrício** 
@@ -272,9 +295,13 @@ tela de forma organizada.
 - ✅ **2.** *Valor hora do serviço (Campo moeda que representa o valor hora do tipo de serviço que será prestado).*
 
 *Cadastrar três registros desse objeto:*
-    - **Serviço de Churrasqueiro** | **Tipo:** *Churrasqueiro* | **Valor Hora do Serviço**: *20*
-    - **Serviço de Limpeza** | **Tipo:** *Limpeza* | **Valor Hora do Serviço**: *30*
-    - **Serviço de Garçom** | **Tipo:** *Garçom* | **Valor Hora do Serviço**: *25*
+
+- **Serviço de Churrasqueiro** | **Tipo:** *Churrasqueiro* | **Valor Hora do Serviço**: *20*
+
+- **Serviço de Limpeza** | **Tipo:** *Limpeza* | **Valor Hora do Serviço**: *30*
+
+- **Serviço de Garçom** | **Tipo:** *Garçom* | **Valor Hora do Serviço**: *25*
+---
 
 - ✅ **1. Desenvolver um Apex Trigger que preencherá o valor no item do churras quando um for criado e o produto vinculado for do tipo serviço.**
 
@@ -300,18 +327,24 @@ tela de forma organizada.
 
 ## Testes
 
-- 🔲 **Classes de teste:** *Cada classe deve estar coberta com ao menos 75% testes unitários e testando cada funcionalidade.*
+- ❌ **Classes de teste:** *Cada classe deve estar coberta com ao menos 75% testes unitários e testando cada funcionalidade.*
 
 #### Classes em Ordem para Verificar
 
 - ✅ *Schedule e Batch*
-- 🔲 *Trigger - Validação de Itens duplicados*
+- ❌ *Trigger - Validação de Itens duplicados*
     * TriggerItensOrcamento
     * ItemOrcamentoChurrasBO
     * ItemOrcamentoChurrasDAO
 
+### Infelizmente, só consegui em torno de 7% de cobertura até data de Entrega do Projeto
 
+<details><summary>📷 Print do Test Coverage:</summary>
 
+![RN-KPI](./assets/Teste-Cobertura.png)
+![RN-KPI](./assets/Teste-CoberturaVSCode.png)
+
+</details>
 
 
 ## ✅ Usuário de Teste
@@ -340,6 +373,6 @@ tela de forma organizada.
 - ✅ Criei campo de Lookup ( Contact ) Avaliador para armazenar opcionalmente quem faz aquela avaliação
 - ✅ Criar regra de validação para Inicio e Fim não ser menor que hoje
 - ✅ Criar regra de validação para mensagem de erro de Contato Nulo
-- 🔲 Formatação de telefone
+- ❌ Formatação de telefone
 
 
