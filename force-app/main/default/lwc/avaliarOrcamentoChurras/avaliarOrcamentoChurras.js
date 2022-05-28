@@ -1,6 +1,6 @@
 import { LightningElement, api, track, wire } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
-import { getRecord, getFieldValue } from 'lightning/uiRecordApi';
+import { getRecord, getFieldValue, getRecordNotifyChange } from 'lightning/uiRecordApi';
 
 import buscarAvaliacoesPorOrcamentoService from '@salesforce/apex/AvaliarChurrasController.buscarAvaliacoesPorOrcamentoChurras';
 
@@ -14,6 +14,7 @@ export default class AvaliarOrcamentoChurras extends LightningElement {
 
      @wire(getRecord, { recordId: '$recordId', fields: FIELDS})  orcamento;
 
+
     get avaliadorAtual(){
         return getFieldValue(this.orcamento.data, FIELDS[0]);
     }
@@ -24,6 +25,7 @@ export default class AvaliarOrcamentoChurras extends LightningElement {
 
     connectedCallback(){
         this.carregarAvaliacoes(this.recordId);
+        getRecordNotifyChange([{recordId: this.recordId}]);
     }
 
     carregarAvaliacoes(idOrcamentoChurras){
@@ -36,16 +38,21 @@ export default class AvaliarOrcamentoChurras extends LightningElement {
 
                 this.lstAvaliacoes = response.lstAvaliacoes;
                 this.lstAvaliacoesFiltradas = response.lstObject;
+
             })
             .catch(error => {
                 console.log(error);
             })
+            
+
+            
     }
 
     handleSuccess(event){
         this.showToast();
         this.handleReset();
         this.atualizarTela();
+        
         
 
     }
