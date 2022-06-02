@@ -325,6 +325,29 @@ tela de forma organizada.
 
 ---
 
+- 🔲 **6. Criação de calculo de dias úteis da Entrada do Produto e Saída do Produto do Objeto Case**
+
+    **a.** *Toda vez que um caso for com data de Entrada do Produto e Saída do Produto for preenchido é necessário **acionar a Trigger**.*
+
+    **b.** *O calculo deve ser feito nos Campos de Tempo Dias Úteis e Tempo Dias Úteis Formato Hora.*
+
+    <details><summary>**Passos:**</summary>
+    - [ ] Seguir código do Vinícius do Campo Saída Jurídico
+
+    - [ ] Refatorar código caso seja necessário
+
+    - [ ] Query do Business Hour
+
+    - [ ] Utilização do Diff
+
+    - [ ] Conversão de Milesegundos para Horas
+
+    - [ ] Transformação de Horas em Extenso e Horas numéricas
+
+    </details>
+
+---
+
 ## Testes
 
 - ❌ **Classes de teste:** *Cada classe deve estar coberta com ao menos 75% testes unitários e testando cada funcionalidade.*
@@ -418,6 +441,8 @@ tela de forma organizada.
 ## Maiores dificuldades 
 
 - 🔲 Flow sobre o processo de aprovação
+- 🔲 Classe de Teste
+- 🔲 Gestão do Tempo
 
 
 ## Pontos para incrementar
