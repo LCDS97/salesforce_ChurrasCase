@@ -16,3 +16,22 @@ String totalTime = String.valueOf(hours) + ' hrs ' + String.valueOf(remainingMin
 system.debug('########### hora convertida ' + totalTime);
 
 system.debug('########### hora show' + horadoShow);
+
+// Descobrir porque vem como null com esse meu método
+if(hours == 0 || mins == null){
+            hourFormatada = '00';
+        }
+        if(mins == 0 || mins == null){
+            minFormatada = '00';
+        }
+
+        if(hours >= 0 && hours < 10){
+            hourFormatada = '0' + String.valueOf(hours);
+        }
+        if(mins >= 0 && mins < 10){
+            minFormatada = '0' + String.valueOf(mins);
+        }
+
+        horaMinFormatada = hourFormatada + ':' + minFormatada;
+
+        return horaMinFormatada;
