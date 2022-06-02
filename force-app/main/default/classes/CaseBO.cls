@@ -1,6 +1,6 @@
 public with sharing class CaseBO {
     
-    public static void setTempoDiasUteis(List<Case> triggerNew, Map<Id,Case> triggerOldMap){
+    public static void setTempoDiasUteis(List<Case> triggerNew, List<Case> triggerOld, Map<Id,Case> triggerOldMap, Map<Id,Case> triggerNewMap){
 
         Long businessHoursDiff;
         Long mins;
