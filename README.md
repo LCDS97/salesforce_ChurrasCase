@@ -331,7 +331,8 @@ tela de forma organizada.
 
     **b.** *O calculo deve ser feito nos Campos de Tempo Dias Úteis e Tempo Dias Úteis Formato Hora.*
 
-    <details><summary>**Passos:**</summary>
+    <details><summary><strongPassos:</strong></summary>
+
     - [ ] Seguir código do Vinícius do Campo Saída Jurídico
 
     - [ ] Refatorar código caso seja necessário
