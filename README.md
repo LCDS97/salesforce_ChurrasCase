@@ -325,7 +325,7 @@ tela de forma organizada.
 
 ---
 
-- 🔲 **6. Criação de calculo de dias úteis da Entrada do Produto e Saída do Produto do Objeto Case**
+- ✅ **6. Criação de calculo de dias úteis da Entrada do Produto e Saída do Produto do Objeto Case**
 
     **a.** *Toda vez que um caso for com data de Entrada do Produto e Saída do Produto for preenchido é necessário **acionar a Trigger**.*
 
@@ -333,19 +333,21 @@ tela de forma organizada.
 
     <details><summary><strongPassos:</strong></summary>
 
-    - [ ] Seguir código do Vinícius do Campo Saída Jurídico
+    - ☑️ Seguir código do Vinícius do Campo Saída Jurídico
 
-    - [ ] Refatorar código caso seja necessário
+    - ☑️ Refatorar código caso seja necessário
 
-    - [ ] Query do Business Hour
+    - ☑️ Query do Business Hour
 
-    - [ ] Utilização do Diff
+    - ☑️ Utilização do Diff
 
-    - [ ] Conversão de Milesegundos para Horas
+    - ☑️ Conversão de Milesegundos para Horas
 
-    - [ ] Transformação de Horas em Extenso e Horas numéricas
+    - ☑️ Transformação de Horas em Extenso e Horas numéricas
 
     </details>
+
+#### Vou refatorar essa classe para receber dois campos dinâmicos, atribuir eles na query e identificar através dos oldMap e adicionar numa lista, verificando que caso essa lista esteja vazia faça a busca dos outros campos, pois como se trata de campos de DateTime, eu posso usar os campos que foram identificados e alterados e adicionar eles na Query ( Ver se isso funciona mesmo, acredito que sim )
 
 ---
 
@@ -361,7 +363,6 @@ tela de forma organizada.
     * ItemOrcamentoChurrasBO
     * ItemOrcamentoChurrasDAO
 
-### Infelizmente, só consegui em torno de 7% de cobertura até data de Entrega do Projeto
 
 <details><summary>📷 Print do Test Coverage:</summary>
 
@@ -397,7 +398,8 @@ tela de forma organizada.
 - ✅ Criei campo de Lookup ( Contact ) Avaliador para armazenar opcionalmente quem faz aquela avaliação
 - ✅ Criar regra de validação para Inicio e Fim não ser menor que hoje
 - ✅ Criar regra de validação para mensagem de erro de Contato Nulo
-- ❌ Formatação de telefone
+- 🔲 Formatação de telefone
+- 🔲 Adicionar endereço nos Contatos e implementar integração de API do [ViaCEP](https://viacep.com.br/)
 
 
 ### Script para amanhã

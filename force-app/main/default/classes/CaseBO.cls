@@ -1,6 +1,13 @@
+/**
+ * @Descrição                : Case Business Object
+ * @Autor                    : 
+ * @Empresa:                 : Everymind LTDA.
+ * @Ultima modificação em:   : [05, 06, 2022]
+ * @Ultima modificação por:  : Lucas Conceição dos Santos / lucas.santos@everymind.com.br
+**/
 public with sharing class CaseBO {
     
-    public static void setTempoDiasUteis(List<Case> triggerNew, List<Case> triggerOld, Map<Id,Case> triggerOldMap, Map<Id,Case> triggerNewMap){
+    public static void setTempoDiasUteis(List<Case> triggerNew, Map<Id,Case> triggerOldMap){
 
         Long businessHoursDiff;
         Long mins;
@@ -30,6 +37,7 @@ public with sharing class CaseBO {
 
     }
 
+    @TestVisible
     private static String validarFormatoDataHora(Long hours, Long mins){
         String horaMinFormatada;
 
