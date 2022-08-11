@@ -11,7 +11,7 @@ public class TestDataFactory{
             ));
 
         insert conta;
-    }
+    } 
 
 
     public static List<OrcamentoChurras__c> criarOrcamentoComContato(Integer numcontatoPerOrcamento, Integer numOrcamentos){
