@@ -9,43 +9,24 @@
             var state = response.getState();
             console.log(state);
             if(state === 'SUCCESS'){
-                var toastEvent = $A.get("e.force:showToast");
 
-                toastEvent.setParams({
-                    title: 'Success',
-                    message: $A.get("Sucesso"),
-                    duration: '2000',
-                    key: 'info_alt',
-                    type: 'success',
-                    mode: 'pester'
-                });
-
-                toastEvent.fire();
+                this.showToast('Sucesso!', 'Clonagem gerada com sucesso!', 'success');
 
                 var OrcamentoChurras = response.getReturnValue();
                 console.log('OrcamentoChurras' + OrcamentoChurras.Id);
-                var navService = component.find("navService");
-                var pageReference = {
-                    type: 'standard__recordPage',
-                    attributes: {
-                        "recordId": OrcamentoChurras.Id,
-                        "objectApiName": 'OrcamentoChurras__c',
-                        "actionName": "edit"
-                    }
-                }
-                navService.navigate(pageReference);
+                var navEvt = $A.get("e.force:navigateToSObject");
+                navEvt.setParams({
+                    "recordId": OrcamentoChurras.Id
+                });
+                navEvt.fire();
             
             } else if (state === 'ERROR'){
                 var errors = response.getError();
                 
                 if (errors) {
                     if (errors[0] && errors[0].message) {
-                        var toastEvent = $A.get("e.force:showToast");
-                        toastEvent.setParams({
-                            "title": "Error!",
-                            "message": errors[0].message
-                        });
-                        toastEvent.fire();
+                        this.showToast('Erro!', errors[0].message, 'error');
+                        $A.get("e.force:closeQuickAction").fire();
                         
                     }
                 }
@@ -53,6 +34,7 @@
 			this.hideSpinner(component);
         });
         $A.enqueueAction(action);
+        
     },
 
     showSpinner: function (component) {
@@ -63,6 +45,20 @@
 	hideSpinner: function (component) {
 		var spinner = component.find("mySpinner");
 		$A.util.addClass(spinner, "slds-hide");
+	},
+
+    showToast: function(title, msg, type, mode) {
+		var toastEvent = $A.get("e.force:showToast");
+		if(toastEvent == null)
+			return;
+
+		toastEvent.setParams({
+			'title': title,
+			'message': msg,
+			'type': type,
+			'mode': mode ? mode : 'dismissible'
+		});
+		toastEvent.fire();
 	}
     
 })
