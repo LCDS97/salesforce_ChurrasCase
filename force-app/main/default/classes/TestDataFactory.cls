@@ -46,7 +46,7 @@ public class TestDataFactory{
       
     }
 
-    public static List<OrcamentoChurras__c> criarOrcamentoComContatoItens(Integer numcontatoPerOrcamento, Integer numOrcamentos){
+    public static List<OrcamentoChurras__c> criarOrcamentoComContatoItens(Integer numcontatoPerOrcamento, Integer numOrcamentos, Integer numItensOrcamentos){
       
       List<Contact> contatos = new List<Contact>();
       for(Integer i=0;i<numcontatoPerOrcamento;i++) {
@@ -74,6 +74,22 @@ public class TestDataFactory{
       }
 
       insert orcamentos;
+
+      List<ItemOrcamentoChurras__c> itens = new List<ItemOrcamentoChurras__c>();
+      for(Integer o = 0; o < numItensOrcamentos; o++){
+        OrcamentoChurras__c orcamento = orcamentos[o];
+
+
+        for(Integer i = 0; i < numOrcamentos; i++){
+
+          itens.add(new ItemOrcamentoChurras__c(
+            OrcamentoChurras__c = orcamento.id,
+            Valor__c = i + i
+          ));
+        }
+      }
+
+      insert itens;
       return orcamentos;
       
     }

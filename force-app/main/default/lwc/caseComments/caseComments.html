@@ -1,0 +1,19 @@
+<template>
+  <div class="carousel-container">
+      <div class="carousel">
+          <template if:true={currentComment}>
+              <div key={currentComment.id} class="carousel-item">
+                  <p>{currentComment.body}</p>
+                  <p>{currentComment.author}</p>
+              </div>
+          </template>
+          <template if:false={currentComment}>
+              <p>No comments found.</p>
+          </template>
+      </div>
+      <div class="carousel-nav">
+          <button onclick={handlePrevious} disabled={disablePrevious}>Previous</button>
+          <button onclick={handleNext} disabled={disableNext}>Next</button>
+      </div>
+  </div>
+</template>
